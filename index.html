@@ -1,662 +1,539 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>面接想定問答集 - AIエンジニア（ポテンシャル採用）</title>
+<title>面接対策 — grasys CD_App (Jr.)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  body {
-    font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", "Meiryo", sans-serif;
-    background: #faf7f2;
-    color: #2b2b2b;
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 32px 24px 80px;
-    line-height: 1.9;
+  :root{
+    --indigo:#1F3A5F;
+    --ink:#26303B;
+    --paper:#F5F4EF;
+    --card:#FFFFFF;
+    --vermilion:#B3392F;
+    --mist:#E7ECF2;
+    --line:#D8D6CE;
   }
-  h1 {
-    font-size: 22px;
-    color: #7a3b1e;
-    border-bottom: 3px solid #d97b4f;
-    padding-bottom: 10px;
-    margin-bottom: 4px;
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Noto Sans JP',system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.75;
+    font-size:16px;
   }
-  .subtitle {
-    color: #8a6d5a;
-    font-size: 14px;
-    margin-bottom: 20px;
+  .wrap{max-width:860px;margin:0 auto;padding:0 20px 96px}
+
+  /* ---------- header ---------- */
+  header{
+    background:var(--indigo);
+    color:#F5F4EF;
+    padding:56px 20px 48px;
   }
-  .section {
-    margin-top: 40px;
-    margin-bottom: 14px;
+  header .wrap{padding-bottom:0}
+  .kicker{
+    font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;
+    color:#A9BAD0;margin-bottom:14px;
   }
-  .section h2 {
-    font-size: 16px;
-    color: #ffffff;
-    background: #7a3b1e;
-    display: inline-block;
-    padding: 5px 16px;
-    border-radius: 16px;
-    margin: 0;
+  h1{
+    font-family:'Shippori Mincho',serif;
+    font-size:clamp(1.9rem,5vw,2.9rem);
+    font-weight:800;line-height:1.3;
   }
-  .section .section-es {
-    font-size: 12.5px;
-    color: #9c8674;
-    font-style: italic;
-    margin-top: 4px;
-  }
-  .card {
-    background: #ffffff;
-    border: 1px solid #e8ddd0;
-    border-left: 5px solid #d97b4f;
-    border-radius: 8px;
-    padding: 18px 22px;
-    margin-bottom: 22px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-  }
-  .qnum {
-    display: inline-block;
-    background: #d97b4f;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 12px;
-    padding: 2px 10px;
-    margin-bottom: 8px;
-  }
-  .q-jp {
-    font-size: 17px;
-    font-weight: bold;
-    color: #7a3b1e;
-    margin: 4px 0 2px;
-  }
-  .q-es {
-    font-size: 13.5px;
-    color: #9c8674;
-    font-style: italic;
-    margin-bottom: 12px;
-  }
-  .a-label {
-    font-size: 12px;
-    color: #a3a3a3;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 8px;
-  }
-  .a-jp {
-    font-size: 15.5px;
-    margin: 4px 0 2px;
-  }
-  .a-es {
-    font-size: 13.5px;
-    color: #6b6b6b;
-    font-style: italic;
-  }
-  ruby rt {
-    font-size: 9px;
-    color: #b06a3d;
-  }
-  hr {
-    border: none;
-    border-top: 1px dashed #e0d3c2;
-    margin: 10px 0;
-  }
-  .footer-note {
-    margin-top: 30px;
-    font-size: 13px;
-    color: #8a6d5a;
-    background: #fff3e8;
-    padding: 14px 18px;
-    border-radius: 8px;
-  }
-  .key-msg {
-    margin: 20px 0 30px;
-    background: #2f2117;
-    color: #f3e6d8;
-    padding: 16px 20px;
-    border-radius: 10px;
-    font-size: 13.5px;
-    line-height: 1.7;
-  }
-  .key-msg b {
-    color: #f2a15c;
+  h1 .sub{display:block;font-size:.5em;font-weight:600;color:#A9BAD0;margin-top:10px;font-family:'Noto Sans JP',sans-serif;letter-spacing:.05em}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .chip{
+    border:1px solid rgba(245,244,239,.35);border-radius:999px;
+    padding:4px 14px;font-size:.8rem;color:#DCE4EE;
   }
 
-  * {
-    box-sizing: border-box;
+  /* ---------- practice bar ---------- */
+  .practice-bar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(245,244,239,.92);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    padding:10px 20px;
   }
+  .practice-bar .inner{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .practice-bar span{font-size:.85rem;color:#5A6572}
+  .practice-bar button{
+    font-family:inherit;font-size:.85rem;font-weight:700;
+    border:1.5px solid var(--indigo);background:transparent;color:var(--indigo);
+    border-radius:999px;padding:6px 16px;cursor:pointer;transition:.15s;
+  }
+  .practice-bar button:hover{background:var(--indigo);color:#fff}
+  .practice-bar button.primary{background:var(--vermilion);border-color:var(--vermilion);color:#fff}
+  .practice-bar button.primary:hover{filter:brightness(1.1)}
+  button:focus-visible, summary:focus-visible{outline:3px solid var(--vermilion);outline-offset:2px}
 
-  @media (max-width: 600px) {
-    body {
-      padding: 18px 12px 60px;
-      line-height: 1.75;
-    }
-    h1 {
-      font-size: 19px;
-    }
-    .subtitle {
-      font-size: 12.5px;
-      margin-bottom: 16px;
-    }
-    .section {
-      margin-top: 30px;
-    }
-    .section h2 {
-      font-size: 14px;
-      padding: 4px 12px;
-    }
-    .section-es {
-      font-size: 11.5px;
-    }
-    .card {
-      padding: 14px 14px;
-      margin-bottom: 16px;
-      border-radius: 6px;
-    }
-    .qnum {
-      font-size: 11px;
-      padding: 2px 8px;
-    }
-    .q-jp {
-      font-size: 15.5px;
-    }
-    .q-es {
-      font-size: 12.5px;
-      margin-bottom: 10px;
-    }
-    .a-jp {
-      font-size: 14.5px;
-    }
-    .a-es {
-      font-size: 12.5px;
-    }
-    ruby rt {
-      font-size: 8px;
-    }
-    .footer-note, .key-msg {
-      font-size: 12px;
-      padding: 12px 14px;
-    }
+  /* ---------- sections ---------- */
+  section{margin-top:64px}
+  h2{
+    font-family:'Shippori Mincho',serif;font-weight:800;
+    font-size:1.5rem;color:var(--indigo);
+    display:flex;align-items:center;gap:14px;margin-bottom:8px;
   }
+  h2::before{
+    content:attr(data-jp);
+    font-size:.95rem;font-weight:700;color:#fff;background:var(--indigo);
+    padding:3px 12px;border-radius:3px;white-space:nowrap;
+  }
+  .section-note{color:#5A6572;font-size:.92rem;margin-bottom:24px;max-width:640px}
 
-  @media (max-width: 380px) {
-    .q-jp {
-      font-size: 14.5px;
-    }
-    .a-jp {
-      font-size: 13.5px;
-    }
+  /* ---------- fact table ---------- */
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:.92rem}
+  th,td{padding:10px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  th{width:220px;background:var(--mist);font-weight:700;color:var(--indigo)}
+  tr:last-child th,tr:last-child td{border-bottom:none}
+
+  /* ---------- strategy cards ---------- */
+  .msg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+  .msg{
+    background:var(--card);border:1px solid var(--line);border-top:4px solid var(--vermilion);
+    padding:18px 18px 16px;
   }
+  .msg b{display:block;font-family:'Shippori Mincho',serif;color:var(--indigo);font-size:1.02rem;margin-bottom:6px}
+  .msg p{font-size:.88rem;color:#49535E}
+
+  /* ---------- Q&A cards ---------- */
+  details.qa{
+    background:var(--card);border:1px solid var(--line);
+    margin-bottom:16px;border-radius:4px;overflow:hidden;
+  }
+  details.qa[open]{box-shadow:0 2px 10px rgba(31,58,95,.08)}
+  summary{
+    list-style:none;cursor:pointer;display:flex;gap:14px;align-items:flex-start;
+    padding:16px 18px;
+  }
+  summary::-webkit-details-marker{display:none}
+  .stamp{
+    flex:0 0 40px;width:40px;height:40px;border-radius:50%;
+    border:2px solid var(--vermilion);color:var(--vermilion);
+    font-family:'Shippori Mincho',serif;font-weight:800;font-size:1.05rem;
+    display:flex;align-items:center;justify-content:center;
+    transform:rotate(-6deg);
+  }
+  .q-text .jp{font-weight:700;font-size:1.02rem;color:var(--indigo)}
+  .q-text .es{font-size:.84rem;color:#75808C;margin-top:2px}
+  .qa-body{padding:0 18px 20px 72px;border-top:1px dashed var(--line)}
+  @media(max-width:600px){.qa-body{padding-left:18px}}
+  .ans-label{
+    display:inline-block;margin:16px 0 8px;font-size:.72rem;font-weight:700;
+    letter-spacing:.18em;color:var(--vermilion);text-transform:uppercase;
+  }
+  .ans-jp{
+    background:var(--mist);border-left:4px solid var(--indigo);
+    padding:14px 16px;font-size:1rem;
+  }
+  .ans-es{font-size:.88rem;color:#49535E;margin-top:10px;font-style:italic}
+  .tip{
+    margin-top:12px;font-size:.86rem;color:#49535E;
+    background:#FBF4EE;border:1px solid #EAD9CB;padding:10px 14px;border-radius:4px;
+  }
+  .tip b{color:var(--vermilion)}
+  ruby rt{font-size:.55em;color:#75808C}
+
+  /* practice mode: hide model answers */
+  body.practice .ans-jp, body.practice .ans-es{
+    filter:blur(6px);user-select:none;transition:filter .2s;cursor:pointer;
+  }
+  body.practice .ans-jp.revealed, body.practice .ans-es.revealed{filter:none;user-select:auto}
+
+  /* ---------- checklist ---------- */
+  ul.check{list-style:none}
+  ul.check li{
+    background:var(--card);border:1px solid var(--line);
+    padding:12px 16px 12px 44px;margin-bottom:8px;position:relative;font-size:.92rem;
+  }
+  ul.check li::before{
+    content:"✓";position:absolute;left:16px;top:11px;
+    color:var(--vermilion);font-weight:800;
+  }
+  footer{margin-top:80px;text-align:center;font-size:.8rem;color:#8A95A1}
+  .jp-inline{color:var(--indigo);font-weight:700}
 </style>
 </head>
 <body>
 
-<h1>面接<ruby>想定<rt>そうてい</rt></ruby><ruby>問答<rt>もんどう</rt></ruby>集</h1>
-<div class="subtitle">AI<ruby>技術者<rt>ぎじゅつしゃ</rt></ruby>（ポテンシャル<ruby>採用<rt>さいよう</rt></ruby>）／ 33問・約1時間の面接を想定 ／ Preguntas y respuestas para la entrevista, en orden lógico</div>
+<header>
+  <div class="wrap">
+    <div class="kicker">Preparación de entrevista · 一次面接</div>
+    <h1>株式会社grasys<span class="sub">CD_App (Jr.) — Ingeniero de desarrollo de aplicaciones · Entrevista formal en japonés</span></h1>
+    <div class="meta-row">
+      <span class="chip">恵比寿ガーデンプレイスタワー 11F</span>
+      <span class="chip">¥4.2M – ¥5.0M</span>
+      <span class="chip">Python · Go · PHP · React/TS</span>
+      <span class="chip">GCP · AWS · Azure · Docker</span>
+    </div>
+  </div>
+</header>
 
-<div class="key-msg">
-<b>Mensaje central para esta entrevista:</b> No eres "alguien que quiere aprender IA". Eres un ingeniero con 8+ años en sistemas críticos (banca, mainframe, producción) que está llevando esa experiencia hacia Python e IA. Tu diferencial es poder conectar sistemas legacy con IA moderna — justo lo que esta empresa de consultoría necesita.
-</div>
-
-<!-- SECTION 1 -->
-<div class="section">
-<h2><ruby>導入<rt>どうにゅう</rt></ruby></h2>
-<div class="section-es">Apertura</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q1</div>
-<div class="q-jp"><ruby>自己<rt>じこ</rt></ruby><ruby>紹介<rt>しょうかい</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。</div>
-<div class="q-es">Preséntese, por favor.</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-<ruby>私<rt>わたし</rt></ruby>はカステヤノス・エリアスと<ruby>申<rt>もう</rt></ruby>します。メキシコ<ruby>出身<rt>しゅっしん</rt></ruby>で、<ruby>今<rt>いま</rt></ruby>は<ruby>東京<rt>とうきょう</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます。エンジニアとして8<ruby>年<rt>ねん</rt></ruby>以上、<ruby>金融<rt>きんゆう</rt></ruby><ruby>系<rt>けい</rt></ruby>や<ruby>自動車<rt>じどうしゃ</rt></ruby><ruby>金融<rt>きんゆう</rt></ruby>の<ruby>基幹<rt>きかん</rt></ruby>システムに<ruby>関<rt>かか</rt></ruby>わってきました。COBOL、JCL、DB2を<ruby>使<rt>つか</rt></ruby>って、<ruby>開発<rt>かいはつ</rt></ruby>、<ruby>保守<rt>ほしゅ</rt></ruby>、バッチ<ruby>処理<rt>しょり</rt></ruby>、<ruby>障害<rt>しょうがい</rt></ruby><ruby>対応<rt>たいおう</rt></ruby>を<ruby>担当<rt>たんとう</rt></ruby>しました。2024<ruby>年<rt>ねん</rt></ruby>からは<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しながら、PythonとAIの<ruby>学習<rt>がくしゅう</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けています。<ruby>個人<rt>こじん</rt></ruby><ruby>開発<rt>かいはつ</rt></ruby>ではKitsune Studyという<ruby>日本語<rt>にほんご</rt></ruby><ruby>学習<rt>がくしゅう</rt></ruby>アプリを<ruby>作<rt>つく</rt></ruby>っていて、FastAPI、PostgreSQL、Gemini APIを<ruby>使<rt>つか</rt></ruby>っています。これまでのシステム<ruby>開発<rt>かいはつ</rt></ruby>の<ruby>経験<rt>けいけん</rt></ruby>を<ruby>活<rt>い</rt></ruby>かしながら、AIを<ruby>実際<rt>じっさい</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>に<ruby>役立<rt>やくだ</rt></ruby>てるエンジニアになりたいと<ruby>思<rt>おも</rt></ruby>っています。
-</div>
-<div class="a-es">Me llamo Elias Castellanos. Soy de México y ahora vivo en Tokio. He trabajado como ingeniero por más de 8 años, en sistemas core de finanzas y financiamiento automotriz, con COBOL, JCL y DB2, encargándome de desarrollo, mantenimiento, procesos batch y respuesta a incidentes. Desde 2024 estudio japonés y continúo aprendiendo Python e IA. En mi proyecto personal, Kitsune Study, uso FastAPI, PostgreSQL y la API de Gemini. Quiero aprovechar mi experiencia previa en sistemas para convertirme en un ingeniero que aplique IA a problemas reales.</div>
+<div class="practice-bar">
+  <div class="inner">
+    <span>Modo estudio:</span>
+    <button onclick="openAll()">Abrir todo</button>
+    <button onclick="closeAll()">Cerrar todo</button>
+    <button class="primary" id="practiceBtn" onclick="togglePractice()">練習モード: OFF</button>
+    <span id="practiceHint" style="display:none">— Respuestas ocultas. Di tu respuesta en voz alta y toca el texto para comparar.</span>
+  </div>
 </div>
 
-<div class="card">
-<div class="qnum">Q2</div>
-<div class="q-jp">なぜメインフレームエンジニアとしてキャリアをスタートしましたか。</div>
-<div class="q-es">¿Por qué empezó su carrera como ingeniero de mainframe?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-<ruby>大学<rt>だいがく</rt></ruby>では<ruby>電子<rt>でんし</rt></ruby><ruby>通信<rt>つうしん</rt></ruby><ruby>工学<rt>こうがく</rt></ruby>を<ruby>専攻<rt>せんこう</rt></ruby>しました。<ruby>卒業<rt>そつぎょう</rt></ruby><ruby>後<rt>ご</rt></ruby>、TSC Mexicoでメインフレームエンジニアの<ruby>仕事<rt>しごと</rt></ruby>を<ruby>紹介<rt>しょうかい</rt></ruby>されました。<ruby>金融<rt>きんゆう</rt></ruby>や<ruby>自動車<rt>じどうしゃ</rt></ruby><ruby>業界<rt>ぎょうかい</rt></ruby>の<ruby>大<rt>おお</rt></ruby>きいシステムに<ruby>関<rt>かか</rt></ruby>わることに<ruby>魅力<rt>みりょく</rt></ruby>を<ruby>感<rt>かん</rt></ruby>じて、その<ruby>道<rt>みち</rt></ruby>に<ruby>進<rt>すす</rt></ruby>みました。
-</div>
-<div class="a-es">En la universidad estudié ingeniería en comunicaciones electrónicas. Después de graduarme, me ofrecieron el puesto de ingeniero de mainframe en TSC Mexico. Me atrajo la idea de trabajar con sistemas grandes de la industria financiera y automotriz, así que seguí ese camino.</div>
+<div class="wrap">
+
+<!-- ==================== FICHA ==================== -->
+<section>
+  <h2 data-jp="会社">Ficha rápida de grasys (memoriza esto)</h2>
+  <p class="section-note">En una entrevista japonesa siempre evalúan cuánto investigaste la empresa (企業研究). Cita 1–2 de estos datos de forma natural en tu 志望動機.</p>
+  <table>
+    <tr><th>Nombre / lectura</th><td>株式会社grasys（グラシス）</td></tr>
+    <tr><th>Fundación / tamaño</th><td>Noviembre 2014 · ~45 empleados · edad promedio 36 años</td></tr>
+    <tr><th>CEO</th><td>長谷川 祐介（はせがわ ゆうすけ）— ingeniero en activo. Fundó la empresa para que los ingenieros puedan enfocarse puramente en la tecnología.</td></tr>
+    <tr><th>Negocio</th><td>Diseño, construcción y operación de infraestructura en nubes públicas (GCP/AWS/Azure), plataformas de datos, consultoría y soluciones de AI. <b>Google Cloud プレミアパートナー</b>.</td></tr>
+    <tr><th>Escala que presumen</th><td>Infraestructura que sirve a +300 millones de usuarios finales; sistemas con millones de requests/segundo; BigQuery con "兆" (billones) de registros diarios.</td></tr>
+    <tr><th>Tu equipo</th><td>Cloud Tech Division → <b>Cloud Development Sec.</b> (desarrollo de aplicaciones web)</td></tr>
+    <tr><th>Stack del puesto</th><td>Backend: Python, Go, PHP (Laravel) · Frontend: TypeScript (React) · Docker · MySQL/PostgreSQL · Backlog/GitHub</td></tr>
+    <tr><th>Cultura / valores</th><td>「技術が好き」por encima de todo · sin micromanagement, evalúan resultados · sin fronteras entre app/infra · apoyo total a certificaciones (pagan el examen + bono por aprobar)</td></tr>
+    <tr><th>Condiciones</th><td>10:00–19:00 · 130+ días libres/año · sábado, domingo y festivos</td></tr>
+  </table>
+</section>
+
+<!-- ==================== ESTRATEGIA ==================== -->
+<section>
+  <h2 data-jp="戦略">Tus 3 mensajes clave</h2>
+  <p class="section-note">Todo lo que digas debe apuntar a uno de estos tres mensajes. Si una respuesta no conecta con ninguno, acórtala.</p>
+  <div class="msg-grid">
+    <div class="msg">
+      <b>① 技術が本当に好き</b>
+      <p>La prueba: llevas casi 2 años estudiando y construyendo Kitsune Study por tu cuenta, sin que nadie te lo pida. Es exactamente el perfil que grasys dice buscar ("好き" antes que habilidad).</p>
+    </div>
+    <div class="msg">
+      <b>② Jr. en cloud, Sr. en disciplina</b>
+      <p>8 años en sistemas bancarios críticos: incidentes de producción, calidad, testing, diseño para prevenir fallos. Un Jr. normal no trae eso. Tú aportas madurez profesional con salario de Jr.</p>
+    </div>
+    <div class="msg">
+      <b>③ Compromiso serio con Japón</b>
+      <p>Renunciaste a tu trabajo para venir, estudias japonés a diario (N3 aprobado, N2 este mes), y tu proyecto personal es literalmente una app para aprender japonés. Nadie puede dudar de tu seriedad.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== A. PRESENTACION ==================== -->
+<section>
+  <h2 data-jp="導入">A. Presentación y motivos</h2>
+
+  <details class="qa" open>
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">自己紹介をお願いします。</span><span class="es">Preséntese, por favor. (~1 minuto. SIEMPRE es la primera pregunta.)</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">カステヤノス・エリアスと<ruby>申<rt>もう</rt></ruby>します。メキシコ<ruby>出身<rt>しゅっしん</rt></ruby>です。大学で<ruby>電子通信工学<rt>でんしつうしんこうがく</rt></ruby>を<ruby>専攻<rt>せんこう</rt></ruby>し、卒業後は8年間、メインフレームエンジニアとして、自動車金融や銀行の<ruby>基幹<rt>きかん</rt></ruby>システムの開発・<ruby>保守<rt>ほしゅ</rt></ruby>に<ruby>携<rt>たずさ</rt></ruby>わってきました。COBOLやDB2を使い、要件確認からテスト、運用・<ruby>障害対応<rt>しょうがいたいおう</rt></ruby>まで幅広く経験しました。<br><br>2024年8月に来日し、現在は日本語学校に通いながら、PythonとReactを使った日本語学習アプリ「Kitsune Study」を個人開発しています。メインフレームで<ruby>培<rt>つちか</rt></ruby>った品質意識と、新しい技術への<ruby>挑戦<rt>ちょうせん</rt></ruby>する気持ちを、<ruby>御社<rt>おんしゃ</rt></ruby>で活かしたいと考えております。本日はよろしくお願いいたします。</div>
+      <p class="ans-es">Me llamo Elias Castellanos, de México. Estudié ingeniería electrónica y de comunicaciones, y trabajé 8 años como ingeniero de mainframe en sistemas core de financiamiento automotriz y banca — desde requerimientos hasta operación y respuesta a incidentes. Llegué a Japón en agosto de 2024; ahora estudio japonés mientras desarrollo Kitsune Study, una app de aprendizaje de japonés con Python y React. Quiero aportar a su empresa la conciencia de calidad del mainframe y mis ganas de retos con nuevas tecnologías.</p>
+      <div class="tip"><b>Tip:</b> No recites el CV completo. 1 minuto máximo. Termina siempre con 「本日はよろしくお願いいたします」. Practica hasta poder decirlo sin leer.</div>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">なぜ日本に来ましたか？／なぜ日本で働きたいのですか？</span><span class="es">¿Por qué vino a Japón? / ¿Por qué quiere trabajar en Japón?</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">以前から日本の文化と技術に強い<ruby>興味<rt>きょうみ</rt></ruby>がありました。特に、日本の<ruby>企業<rt>きぎょう</rt></ruby>の品質への<ruby>こだわり<rt></rt></ruby>や、ものづくりの<ruby>姿勢<rt>しせい</rt></ruby>に<ruby>共感<rt>きょうかん</rt></ruby>しています。私自身も金融システムで「<ruby>絶対<rt>ぜったい</rt></ruby>に止めない、<ruby>間違<rt>まちが</rt></ruby>えない」仕事をしてきたので、その<ruby>価値観<rt>かちかん</rt></ruby>が近いと感じました。<br><br>キャリアの次のステップを考えたとき、「いつか」ではなく本気で日本で働きたいと思い、仕事を辞めて来日し、日本語学校に入学しました。長期的に日本で生活し、エンジニアとして<ruby>貢献<rt>こうけん</rt></ruby>していきたいと考えています。</div>
+      <p class="ans-es">Desde hace tiempo me interesan la cultura y la tecnología de Japón; en particular me identifico con la obsesión por la calidad, porque en banca yo también trabajé bajo la filosofía de "nunca detenerse, nunca equivocarse". Al pensar en mi siguiente paso, decidí dejar de decir "algún día": renuncié, vine y entré a la escuela de japonés. Quiero establecerme aquí a largo plazo.</p>
+      <div class="tip"><b>Importante:</b> Esta respuesta es una plantilla — <b>personalízala con tu razón real</b> (anime, viaje previo, tu esposa, lo que sea genuino). La conexión "calidad japonesa = mi trabajo en banca" es muy fuerte, consérvala. La frase clave que quieren escuchar: <span class="jp-inline">長期的に日本で働きたい</span> (quiero quedarme a largo plazo — les quita el miedo de que te vayas en 2 años).</div>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">当社を志望する理由を教えてください。</span><span class="es">¿Por qué quiere trabajar en grasys? (志望動機 — LA pregunta más importante.)</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">理由は三つあります。<br><br>一つ目は、御社が「技術が好き」という気持ちを何よりも大切にしている点です。私が離職中も毎日勉強と個人開発を続けているのは、<ruby>純粋<rt>じゅんすい</rt></ruby>に技術が好きだからです。この<ruby>価値観<rt>かちかん</rt></ruby>に強く共感しました。<br><br>二つ目は、Google Cloud プレミアパートナーとして、クラウドと生成AIの<ruby>最先端<rt>さいせんたん</rt></ruby>の案件に関われる点です。現在、FastAPI、React、Gemini APIを使って開発しており、御社の開発環境と近い技術を使っています。<br><br>三つ目は、アプリとインフラの<ruby>垣根<rt>かきね</rt></ruby>なく挑戦できる文化です。メインフレームで経験した運用や障害対応の<ruby>視点<rt>してん</rt></ruby>を、クラウドの世界でも活かして、幅広いエンジニアに成長したいと考えています。</div>
+      <p class="ans-es">Tres razones: (1) grasys valora el amor genuino por la tecnología por encima de todo — y yo estudio y desarrollo a diario incluso sin empleo, por puro gusto. (2) Como Google Cloud Premier Partner, podría participar en proyectos de punta de cloud y AI generativa; ya uso FastAPI, React y Gemini API, tecnologías cercanas a su stack. (3) Su cultura sin fronteras entre app e infra me permitiría aplicar mi experiencia de operación e incidentes del mainframe al mundo cloud.</p>
+      <div class="tip"><b>Tip:</b> La estructura 「理由は三つあります。一つ目は…」 es el formato estándar japonés y demuestra orden mental. Memoriza esta respuesta palabra por palabra.</div>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">なぜメインフレームからWeb開発に転向したいのですか？</span><span class="es">¿Por qué quiere cambiar de mainframe a desarrollo web?</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">メインフレームの仕事には<ruby>誇<rt>ほこ</rt></ruby>りを持っていますし、そこで学んだ品質意識や設計の考え方は今も私の<ruby>土台<rt>どだい</rt></ruby>です。ただ、Banco AztecaでCOBOLの一部機能をPythonへ<ruby>移行<rt>いこう</rt></ruby>する<ruby>対応<rt>たいおう</rt></ruby>をしたとき、モダンな技術の<ruby>可能性<rt>かのうせい</rt></ruby>に強く<ruby>惹<rt>ひ</rt></ruby>かれました。<br><br>それから独学でPythonやReactを学び、Kitsune Studyを開発する中で、「作ったものがすぐユーザーに届く」Web開発の面白さを<ruby>実感<rt>じっかん</rt></ruby>しました。<ruby>逃<rt>に</rt></ruby>げではなく、メインフレームの経験を土台に、クラウドの世界で成長したいという<ruby>前向<rt>まえむ</rt></ruby>きな<ruby>選択<rt>せんたく</rt></ruby>です。</div>
+      <p class="ans-es">Estoy orgulloso del mainframe — su disciplina de calidad sigue siendo mi base. Pero cuando migré funciones de COBOL a Python en Banco Azteca, me atrajo el potencial de la tecnología moderna. Desarrollando Kitsune Study descubrí lo emocionante del web: lo que construyes llega de inmediato al usuario. No huyo del mainframe; es una decisión positiva de crecer en cloud sobre esa base.</p>
+      <div class="tip"><b>Tip:</b> Nunca hables mal del mainframe ("es viejo, no tiene futuro") — en Japón hablar mal de tu pasado es red flag. Fórmula: orgullo del pasado + atracción positiva hacia lo nuevo.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ==================== B. EMPRESAS ==================== -->
+<section>
+  <h2 data-jp="経歴">B. Tus empresas — qué hacías, explicado simple</h2>
+  <p class="section-note">Te van a pedir explicar tu experiencia. La técnica: primero una frase que <b>cualquier persona</b> entienda (簡単に言うと…), luego tu rol concreto, y cierra con 1–2 logros. Nunca empieces con siglas (COBOL, JCL, CICS) — empieza con el problema de negocio.</p>
+
+  <details class="qa" open>
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">これまでの職務経歴を簡単に説明してください。</span><span class="es">Resuma su trayectoria profesional. (~2 min. Casi siempre viene después del 自己紹介.)</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo (resumen de los 8 años)</span>
+      <div class="ans-jp">8年間、三つの会社で、金融系の<ruby>基幹<rt>きかん</rt></ruby>システムを担当してきました。<br><br>最初のTSCでは、自動車ローンのシステムです。車をローンで買うお客様の、契約から支払い、完済までを管理するシステムを開発し、後半は4名のチームリーダーも経験しました。<br><br>次のBanco Aztecaでは、銀行の<ruby>決済<rt>けっさい</rt></ruby>システムです。会社や政府が個人にお金を支払うためのシステムを開発しました。<br><br>最後のHCLTechでは、米国銀行のコアバンキングシステムです。ポイントシステムの<ruby>移行<rt>いこう</rt></ruby>と、本番<ruby>障害<rt>しょうがい</rt></ruby>の対応チームを担当しました。<br><br><ruby>共通<rt>きょうつう</rt></ruby>しているのは、「止められない、<ruby>間違<rt>まちが</rt></ruby>えられない」金融システムを、<ruby>安定<rt>あんてい</rt></ruby>して動かし続けてきたことです。</div>
+      <p class="ans-es">Ocho años, tres empresas, siempre sistemas core financieros: en TSC, préstamos automotrices (del contrato al pago final) + liderazgo de 4 personas; en Banco Azteca, sistemas de pago del banco (empresas/gobierno pagando a personas); en HCLTech, core banking de un banco de EE.UU. (migración de puntos + equipo de incidentes de producción). El hilo común: mantener estables sistemas financieros que "no pueden detenerse ni equivocarse".</p>
+      <div class="tip"><b>Tip:</b> Esta versión de 2 minutos es tu mapa. Si el entrevistador quiere profundizar en alguna empresa, él te lo pedirá — no cuentes todo de golpe. La frase final 「止められない、間違えられない」 es tu marca personal: úsala.</div>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">①</span><span class="q-text"><span class="jp">TSC（2016–2019）— 自動車金融システム</span><span class="es">Qué hacías + puntos fuertes para presumir</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">簡単に言うと (explicación simple)</span>
+      <div class="ans-jp">簡単に言うと、車をローンで買うためのシステムです。FCA（今のStellantis）という自動車メーカー<ruby>向<rt>む</rt></ruby>けに、契約の作成、データ<ruby>検証<rt>けんしょう</rt></ruby>、毎月の支払い、<ruby>償却<rt>しょうきゃく</rt></ruby>、契約の<ruby>終了<rt>しゅうりょう</rt></ruby>まで、ローン契約のライフサイクル全体を管理していました。私はCOBOLとDB2でその開発・保守を担当し、給与計算や人事関連のシステムも担当しました。</div>
+      <p class="ans-es">"En pocas palabras, es el sistema para comprar autos a crédito." Para FCA (hoy Stellantis): creación de contratos, validación, pagos mensuales, amortización y cierre — todo el ciclo de vida del préstamo. Yo desarrollaba y mantenía eso en COBOL/DB2, más nómina y sistemas de RRHH.</p>
+      <span class="ans-label">アピールポイント (tus 3 logros aquí)</span>
+      <div class="ans-jp">① メキシコの<ruby>労働法改正<rt>ろうどうほうかいせい</rt></ruby>に<ruby>伴<rt>ともな</rt></ruby>う給与計算システムの<ruby>再設計<rt>さいせっけい</rt></ruby>で、4名の開発メンバーをリードしました。<ruby>法施行日<rt>ほうしこうび</rt></ruby>という<ruby>絶対<rt>ぜったい</rt></ruby>に動かせない<ruby>期限<rt>きげん</rt></ruby>の前に、無事リリースできました。<br><br>② Excel VBAでテストデータを<ruby>自動生成<rt>じどうせいせい</rt></ruby>するツールを自分で作り、テストの<ruby>効率<rt>こうりつ</rt></ruby>とバグ<ruby>検出<rt>けんしゅつ</rt></ruby>の<ruby>精度<rt>せいど</rt></ruby>を上げました。<br><br>③ Java担当者の退職で急に業務を引き継いだとき、独学でJavaを習得し、メインフレーム案件と並行して期限内に完了させました。</div>
+      <p class="ans-es">① Lideré a 4 devs en el rediseño de nómina por la reforma laboral — deadline inmovible (fecha de entrada en vigor de la ley) y entregamos a tiempo. ② Creé por iniciativa propia una herramienta VBA de generación automática de datos de prueba. ③ Cuando renunció el encargado de Java, lo aprendí solo y saqué ambos proyectos a tiempo.</p>
+      <div class="tip"><b>Por qué importan:</b> el ① prueba liderazgo + trabajo bajo presión real; el ② prueba que mejoras procesos sin que te lo pidan (当事者意識 — justo lo que pide la vacante); el ③ es tu historia estrella de aprendizaje autodidacta, la misma que hoy repites con Python/React.</div>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">②</span><span class="q-text"><span class="jp">Banco Azteca（2019–2022）— 決済・口座管理システム</span><span class="es">Qué hacías + puntos fuertes para presumir</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">簡単に言うと (explicación simple)</span>
+      <div class="ans-jp">簡単に言うと、会社や政府が個人にお金を支払うためのシステムです。例えば、銀行<ruby>口座<rt>こうざ</rt></ruby>を持っていない人でも、SMSで届いた<ruby>参照番号<rt>さんしょうばんごう</rt></ruby>やQRコードを銀行の<ruby>窓口<rt>まどぐち</rt></ruby>で見せれば、<ruby>現金<rt>げんきん</rt></ruby>を受け取れる<ruby>仕組<rt>しく</rt></ruby>みです。メキシコでは口座を持たない人が多いので、社会的にも重要なシステムでした。<br><br>また、親口座と子口座の<ruby>構造<rt>こうぞう</rt></ruby>を持つ口座管理システムも担当し、夜間バッチで口座ツリー全体の<ruby>残高<rt>ざんだか</rt></ruby>を<ruby>調整<rt>ちょうせい</rt></ruby>する処理を実装しました。</div>
+      <p class="ans-es">"En pocas palabras: un sistema para que empresas y gobierno paguen a personas." Incluso alguien sin cuenta bancaria puede cobrar en efectivo en ventanilla mostrando el número de referencia o QR que le llegó por SMS — socialmente importante en México, donde mucha gente no tiene cuenta. También el sistema de cuentas madre/hijas con batch nocturno que rebalancea todo el árbol de cuentas.</p>
+      <span class="ans-label">アピールポイント (tus 3 logros aquí)</span>
+      <div class="ans-jp">① 数字の参照番号からQRコードへの<ruby>改善<rt>かいぜん</rt></ruby>を自分から<ruby>提案<rt>ていあん</rt></ruby>し、実装しました。<ruby>利便性<rt>りべんせい</rt></ruby>とセキュリティの両方が向上しました。<br><br>② 10<ruby>階層<rt>かいそう</rt></ruby>の口座構造を<ruby>想定<rt>そうてい</rt></ruby>して、約20パターンのテストケースを設計し、<ruby>複雑<rt>ふくざつ</rt></ruby>な<ruby>資金移動<rt>しきんいどう</rt></ruby>ロジックの品質を<ruby>確保<rt>かくほ</rt></ruby>しました。<br><br>③ <ruby>既存<rt>きぞん</rt></ruby>COBOL機能の一部をPythonへ移行する対応を担当しました。これが、今のWeb開発への挑戦のきっかけになりました。</div>
+      <p class="ans-es">① Propuse yo mismo el cambio de número de referencia a QR y lo implementé — mejoró usabilidad y seguridad a la vez. ② Diseñé ~20 casos de prueba para un árbol de cuentas de 10 niveles, asegurando la calidad de una lógica de movimientos de dinero muy compleja. ③ Migré funciones de COBOL a Python — el origen de mi camino actual hacia web.</p>
+      <div class="tip"><b>Por qué importan:</b> el ① es tu mejor ejemplo de "detectar un problema y resolverlo por cuenta propia" (要件歓迎 de la vacante: 自らシステムの課題を発見し、解決に導いた経験). El ③ conecta perfectamente tu pasado con tu presente — úsalo como puente si preguntan por qué cambiaste de rumbo.</div>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">③</span><span class="q-text"><span class="jp">HCLTech（2022–2024）— 米国銀行コアバンキング</span><span class="es">Qué hacías + puntos fuertes para presumir</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">簡単に言うと (explicación simple)</span>
+      <div class="ans-jp">簡単に言うと、米国の銀行USAAの、クレジットカードのポイントシステムを、古いシステム（Fiserv）から新しいシステム（Kobie）へ<ruby>移行<rt>いこう</rt></ruby>するプロジェクトです。<br><br>お客様のポイントが1ポイントでもずれたら大きな問題になるので、毎日、<ruby>大量<rt>たいりょう</rt></ruby>のポイントデータを<ruby>照合<rt>しょうごう</rt></ruby>するバッチ処理を開発・修正しました。また、Core Incident Response Teamの一員として、本番環境の<ruby>高優先度<rt>こうゆうせんど</rt></ruby>インシデントの分析・対応も担当しました。</div>
+      <p class="ans-es">"En pocas palabras: migrar el sistema de puntos de tarjeta de crédito del banco USAA, de Fiserv a Kobie." Si el punto de un cliente se desvía aunque sea en 1, es un problema grave — por eso desarrollé los batch de conciliación diaria de datos masivos de puntos. Además, como parte del Core Incident Response Team, analizaba y atendía incidentes de alta prioridad en producción.</p>
+      <span class="ans-label">アピールポイント (tus 3 logros aquí)</span>
+      <div class="ans-jp">① ポイント移行において、日次照合処理を担当し、データ<ruby>不整合<rt>ふせいごう</rt></ruby>のない安定した移行に<ruby>貢献<rt>こうけん</rt></ruby>しました。<br><br>② システム<ruby>変更<rt>へんこう</rt></ruby>のたびに、<ruby>関連<rt>かんれん</rt></ruby>プログラムや<ruby>共有<rt>きょうゆう</rt></ruby>ファイルへの<ruby>影響分析<rt>えいきょうぶんせき</rt></ruby>を行い、リリース後の障害リスクを<ruby>低減<rt>ていげん</rt></ruby>しました。<br><br>③ 米国・インド・メキシコの多国籍チームと、英語で<ruby>円滑<rt>えんかつ</rt></ruby>に連携しました。Jira、Confluence、ServiceNowを使ったタスク管理・情報共有にも<ruby>慣<rt>な</rt></ruby>れています。</div>
+      <p class="ans-es">① Contribuí a una migración estable, sin inconsistencias de datos, con los batch de conciliación diaria. ② En cada cambio hacía análisis de impacto sobre programas y archivos compartidos, reduciendo el riesgo de fallos post-release. ③ Colaboré fluidamente en inglés con un equipo de EE.UU., India y México, usando Jira, Confluence y ServiceNow.</p>
+      <div class="tip"><b>Por qué importan:</b> el ① y ② muestran la mentalidad de "diseñar para prevenir fallos" — exactamente lo que grasys llama 徹底した設計力 (el diseño que encierra el riesgo de antemano). El ③ importa porque grasys es 多国籍な職場 según la propia vacante. Si preguntan un ejemplo concreto de incidente, prepara UNA historia con formato: situación → qué hiciste → resultado → prevención.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ==================== C. RETIROS ==================== -->
+<section>
+  <h2 data-jp="退職">C. Razones de salida de cada empresa</h2>
+  <p class="section-note">Regla de oro en Japón: <b>nunca negativo</b> (jefe malo, salario bajo, aburrimiento). Siempre 前向き (hacia adelante): "quería crecer en X". Nota que tu historia real ya tiene una progresión lógica perfecta: automotriz → banca real → proyecto global → Japón.</p>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">TSCを退職した理由は何ですか？（2016–2019）</span><span class="es">¿Por qué dejó TSC?</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">TSCでは3年間、自動車金融システムの開発と、4名のメンバーのリードを経験させていただきました。金融システムに携わる中で、次は金融の<ruby>中核<rt>ちゅうかく</rt></ruby>である銀行の<ruby>決済<rt>けっさい</rt></ruby>システムに直接携わりたいと考えるようになり、Banco Aztecaに転職しました。</div>
+      <p class="ans-es">En TSC pasé 3 años desarrollando sistemas de financiamiento automotriz y liderando a 4 miembros. Trabajando con sistemas financieros, quise involucrarme directamente en el núcleo: los sistemas de pago de un banco. Por eso me cambié a Banco Azteca.</p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">Banco Aztecaを退職した理由は？（2019–2022）</span><span class="es">¿Por qué dejó Banco Azteca?</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">Banco Aztecaでは決済システムと<ruby>口座管理<rt>こうざかんり</rt></ruby>システムの開発を経験し、大きく成長できました。次のステップとして、よりグローバルな<ruby>環境<rt>かんきょう</rt></ruby>で、<ruby>海外<rt>かいがい</rt></ruby>の大規模プロジェクトに挑戦したいと考えました。HCLTechでは米国銀行向けのコアバンキングシステムを担当し、米国・インド・メキシコの多国籍チームと英語で働く経験を積むことができました。</div>
+      <p class="ans-es">En Banco Azteca crecí mucho con sistemas de pago y gestión de cuentas. Como siguiente paso quise un entorno más global y proyectos internacionales de gran escala. En HCLTech trabajé en core banking para un banco de EE.UU., en un equipo multinacional (EE.UU., India, México) en inglés.</p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">HCLTechを退職した理由は？（2022–2024）</span><span class="es">¿Por qué dejó HCLTech? (Aquí conecta con venir a Japón.)</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">日本で働くという長年の<ruby>目標<rt>もくひょう</rt></ruby>を<ruby>実現<rt>じつげん</rt></ruby>するためです。<ruby>中途半端<rt>ちゅうとはんぱ</rt></ruby>な日本語では日本のチームで<ruby>活躍<rt>かつやく</rt></ruby>できないと考え、<ruby>思<rt>おも</rt></ruby>い<ruby>切<rt>き</rt></ruby>って退職し、来日して日本語学校で<ruby>集中的<rt>しゅうちゅうてき</rt></ruby>に勉強することにしました。<ruby>覚悟<rt>かくご</rt></ruby>を持った選択でした。</div>
+      <p class="ans-es">Fue para cumplir mi meta de años: trabajar en Japón. Pensé que con un japonés a medias no podría contribuir de verdad en un equipo japonés, así que tomé la decisión firme de renunciar, venir y estudiar intensivamente. Fue una elección con determinación (覚悟).</p>
+      <div class="tip"><b>Tip:</b> La palabra <span class="jp-inline">覚悟（かくご）</span> — determinación/compromiso — resuena mucho en grasys: su página dice que el valor de un ingeniero se mide por las dificultades que superó "con 覚悟".</div>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">2024年8月から現在まで、離職期間が長いですが、何をしていましたか？</span><span class="es">Lleva casi 2 años sin empleo. ¿Qué ha hecho en ese tiempo? (El "blank period" — seguro la preguntan.)</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">日本語学校に通いながら、技術の勉強と個人開発を毎日続けてきました。2025年12月にJLPT N3に合格し、今月N2を受験する<ruby>予定<rt>よてい</rt></ruby>です。<br><br>技術面では、Python、FastAPI、React、TypeScript、PostgreSQLを学び、2025年9月から「Kitsune Study」という日本語学習Webアプリを開発しています。<ruby>認証<rt>にんしょう</rt></ruby>、DB設計、AI<ruby>連携<rt>れんけい</rt></ruby>、デプロイまで一人で担当し、<ruby>実際<rt>じっさい</rt></ruby>に<ruby>公開<rt>こうかい</rt></ruby>しています。勉強を止めた日は一日もありません。</div>
+      <p class="ans-es">He ido a la escuela de japonés mientras estudiaba tecnología y desarrollaba a diario. Aprobé N3 en diciembre 2025 y este mes presento N2. En lo técnico: aprendí Python, FastAPI, React, TypeScript, PostgreSQL, y desde septiembre 2025 desarrollo Kitsune Study — autenticación, diseño de BD, integración de AI y deploy, todo yo, y está publicada. No he dejado de estudiar un solo día.</p>
+      <div class="tip"><b>Tip:</b> Este "hueco" es en realidad tu mejor argumento: lo convierte en prueba del mensaje ① (技術が好き). Di la URL si te la piden: kitsune.study.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ==================== C. TECNICA/EXPERIENCIA ==================== -->
+<section>
+  <h2 data-jp="経験">D. Experiencia y preguntas técnicas</h2>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">Kitsune Studyについて詳しく教えてください。</span><span class="es">Cuéntenos sobre Kitsune Study en detalle.</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">日本語学習者向けのWebアプリで、JLPT対策、語彙・漢字・文法の学習、SRS（<ruby>間隔反復<rt>かんかくはんぷく</rt></ruby>）、AIを使った会話・読解の生成機能などがあります。<br><br>バックエンドはFastAPIとPostgreSQL、フロントエンドはReactとTypeScriptです。JWTとGoogle OAuthの認証、Gemini APIによるAI生成、Google Cloud TTSでの音声生成、Cloudflare R2でのメディア管理、GitHub ActionsでのCI/CD、Dockerでの開発環境も<ruby>実装<rt>じっそう</rt></ruby>しました。<ruby>妻<rt>つま</rt></ruby>と二人のチームで、私が開発全般を担当しています。</div>
+      <p class="ans-es">Es una web app para estudiantes de japonés: preparación JLPT, vocabulario/kanji/gramática, SRS, y generación con AI de conversaciones y lecturas. Backend en FastAPI + PostgreSQL, frontend React + TypeScript. Implementé autenticación JWT/Google OAuth, AI con Gemini API, voz con Google Cloud TTS, media en Cloudflare R2, CI/CD con GitHub Actions y Docker. Somos un equipo de dos con mi esposa; yo llevo todo el desarrollo.</p>
+      <div class="tip"><b>Tip:</b> Prepárate para follow-ups: ¿por qué FastAPI y no Django? ¿cómo diseñaste el SRS? ¿qué fue lo más difícil? (buena respuesta: la generación y unión de audio japonés con TTS + pydub, o el modo offline con Service Worker).</div>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">GCPやAWSの実務経験はありますか？</span><span class="es">¿Tiene experiencia laboral con GCP o AWS? (Tu gap — respóndelo de frente.)</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp"><ruby>正直<rt>しょうじき</rt></ruby>に申し上げると、GCPやAWSの<ruby>業務<rt>ぎょうむ</rt></ruby>経験はまだありません。ただ、個人開発ではRailway、Vercel、Cloudflare R2などのクラウドサービスを使い、Docker、CI/CD、DBマイグレーション、<ruby>環境変数<rt>かんきょうへんすう</rt></ruby>の管理など、クラウド開発の<ruby>基本<rt>きほん</rt></ruby>は実践しています。Google Cloud TTSやGemini APIなど、Googleのサービスも利用しています。<br><br>また、御社には資格取得の支援制度があると<ruby>伺<rt>うかが</rt></ruby>っています。入社後は早期にGoogle Cloudの<ruby>認定資格<rt>にんていしかく</rt></ruby>を取得したいと考えています。</div>
+      <p class="ans-es">Honestamente, aún no tengo experiencia laboral con GCP/AWS. Pero en mi proyecto personal uso Railway, Vercel y Cloudflare R2, y practico las bases del desarrollo cloud: Docker, CI/CD, migraciones de BD, manejo de variables de entorno. También uso servicios de Google (Cloud TTS, Gemini API). Sé que grasys apoya la obtención de certificaciones — quiero certificarme en Google Cloud pronto tras entrar.</p>
+      <div class="tip"><b>Tip:</b> Admitir el gap con 正直に申し上げると (+ plan concreto) genera confianza. Mencionar SU programa de certificaciones demuestra que leíste la vacante. Si tienes tiempo antes de la entrevista, empieza el curso gratuito de Google Cloud Skills Boost para poder decir 「現在、Google Cloudの学習を始めています」.</div>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">障害対応の経験について教えてください。</span><span class="es">Hábleme de su experiencia en respuesta a incidentes. (Aquí brillas.)</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">HCLTechでは、米国銀行のCore Incident Response Teamの一員として、本番環境の<ruby>高優先度<rt>こうゆうせんど</rt></ruby>インシデントの分析・対応を担当しました。<br><br>銀行のシステムは止められないので、まず<ruby>影響範囲<rt>えいきょうはんい</rt></ruby>を<ruby>特定<rt>とくてい</rt></ruby>し、<ruby>暫定対応<rt>ざんていたいおう</rt></ruby>と<ruby>根本原因<rt>こんぽんげんいん</rt></ruby>の分析を分けて<ruby>冷静<rt>れいせい</rt></ruby>に進めることを心がけていました。<ruby>再発防止<rt>さいはつぼうし</rt></ruby>まで<ruby>含<rt>ふく</rt></ruby>めて対応することが<ruby>重要<rt>じゅうよう</rt></ruby>だと考えています。この経験は、御社の運用や<ruby>安定稼働<rt>あんていかどう</rt></ruby>を重視する文化でも活かせると思います。</div>
+      <p class="ans-es">En HCLTech fui parte del Core Incident Response Team de un banco de EE.UU., analizando y atendiendo incidentes de alta prioridad en producción. Como un banco no puede detenerse, mi enfoque era: identificar el alcance del impacto, separar la mitigación temporal del análisis de causa raíz, y actuar con calma hasta la prevención de recurrencia. Creo que esto encaja con la cultura de operación estable de grasys.</p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">あなたの強みと弱みを教えてください。</span><span class="es">¿Cuáles son sus fortalezas y debilidades?</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">強みは、<ruby>未経験<rt>みけいけん</rt></ruby>の技術でも<ruby>主体的<rt>しゅたいてき</rt></ruby>に学んで<ruby>結果<rt>けっか</rt></ruby>を出せることです。TSC時代、Java担当者の退職で急に業務を引き継いだとき、独学でJavaを習得し、メインフレーム案件と<ruby>並行<rt>へいこう</rt></ruby>して<ruby>期限内<rt>きげんない</rt></ruby>に完了させました。今のWeb開発への挑戦も同じです。<br><br>弱みは、品質を重視するあまり、<ruby>慎重<rt>しんちょう</rt></ruby>になりすぎることがある点です。金融システムの<ruby>習慣<rt>しゅうかん</rt></ruby>ですが、個人開発では「まず小さくリリースして改善する」ことを<ruby>意識的<rt>いしきてき</rt></ruby>に練習しています。</div>
+      <p class="ans-es">Fortaleza: aprendo tecnologías nuevas por iniciativa propia y entrego resultados — cuando el encargado de Java renunció en TSC, lo aprendí solo y completé ambos proyectos a tiempo. Debilidad: por mi hábito de calidad bancaria, a veces soy demasiado cauteloso; en mi proyecto personal practico conscientemente "lanzar pequeño y mejorar".</p>
+      <div class="tip"><b>Tip:</b> La debilidad debe ser real pero con plan de mejora, y nunca fatal para el puesto ("no sé trabajar en equipo" = descalificado). "Demasiado cauteloso" es perfecta: es casi una fortaleza disfrazada, pero creíble.</div>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">チームで働いた経験、リーダー経験について教えてください。</span><span class="es">Hábleme de su experiencia en equipo / como líder.</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">TSCでは、メキシコの<ruby>労働法改正<rt>ろうどうほうかいせい</rt></ruby>に<ruby>伴<rt>ともな</rt></ruby>う給与計算システムの<ruby>再設計<rt>さいせっけい</rt></ruby>プロジェクトで、4名の開発メンバーをリードしました。タスクの<ruby>割<rt>わ</rt></ruby>り<ruby>当<rt>あ</rt></ruby>て、進捗管理、コードレビュー、技術支援を担当し、会計部門とも連携しながら、法改正前に<ruby>無事<rt>ぶじ</rt></ruby>リリースできました。<br><br>また、HCLTechでは米国・インド・メキシコの多国籍チームで、英語でコミュニケーションを取りながら働きました。時差や文化の違いがある中で、<ruby>丁寧<rt>ていねい</rt></ruby>な<ruby>報告<rt>ほうこく</rt></ruby>・<ruby>共有<rt>きょうゆう</rt></ruby>を心がけていました。</div>
+      <p class="ans-es">En TSC lideré a 4 desarrolladores en el rediseño del sistema de nómina por la reforma laboral mexicana: asignación de tareas, progreso, code review y soporte técnico, coordinando con contabilidad — lanzamos a tiempo antes de la reforma. En HCLTech trabajé con equipos de EE.UU., India y México en inglés, cuidando la comunicación y los reportes claros pese a husos horarios y culturas distintas.</p>
+    </div>
+  </details>
+</section>
+
+<!-- ==================== D. PRACTICAS ==================== -->
+<section>
+  <h2 data-jp="条件">E. Preguntas prácticas (visa, japonés, salario)</h2>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">日本語はどのくらいできますか？勉強はどうしていますか？</span><span class="es">¿Qué nivel de japonés tiene? ¿Cómo estudia?</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">2025年12月にJLPT N3に合格し、今月N2を受験する予定です。日常会話と<ruby>基本的<rt>きほんてき</rt></ruby>な業務のコミュニケーションは日本語で<ruby>可能<rt>かのう</rt></ruby>です。技術的な<ruby>複雑<rt>ふくざつ</rt></ruby>な<ruby>議論<rt>ぎろん</rt></ruby>はまだ勉強中ですが、英語でも対応できます。<br><br>毎日学校の授業に加えて、自分で開発したKitsune Studyを使って勉強しています。自分が一番のユーザーです。入社後も、ビジネス日本語のレベルまで<ruby>継続<rt>けいぞく</rt></ruby>して勉強していきます。</div>
+      <p class="ans-es">Aprobé N3 en diciembre 2025 y presento N2 este mes. Puedo comunicarme en japonés en conversación diaria y trabajo básico; las discusiones técnicas complejas aún las estoy puliendo, pero puedo cubrirlas en inglés. Estudio a diario — ¡con mi propia app, soy mi usuario #1! — y seguiré hasta nivel de negocios.</p>
+      <div class="tip"><b>Tip:</b> "Soy el primer usuario de mi propia app de japonés" (自分が一番のユーザーです) es memorable y suele sacar una sonrisa. La entrevista misma ES el examen de japonés: habla despacio y claro, no te preocupes por errores pequeños.</div>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">在留資格（ビザ）について教えてください。</span><span class="es">¿Cuál es su estatus de residencia / visa?</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">現在は「留学」の在留資格で、2026年11月26日まで<ruby>有効<rt>ゆうこう</rt></ruby>です。<ruby>内定<rt>ないてい</rt></ruby>をいただけましたら、「<ruby>技術<rt>ぎじゅつ</rt></ruby>・<ruby>人文知識<rt>じんぶんちしき</rt></ruby>・<ruby>国際業務<rt>こくさいぎょうむ</rt></ruby>」への変更を<ruby>申請<rt>しんせい</rt></ruby>します。工学の<ruby>学士号<rt>がくしごう</rt></ruby>と8年以上の実務経験がありますので、<ruby>要件<rt>ようけん</rt></ruby>は<ruby>満<rt>み</rt></ruby>たしていると考えています。</div>
+      <p class="ans-es">Actualmente tengo visa de estudiante (留学), válida hasta el 26 de noviembre de 2026. Si recibo la oferta, solicitaré el cambio a visa de trabajo 技術・人文知識・国際業務. Con mi licenciatura en ingeniería y 8+ años de experiencia, cumplo los requisitos.</p>
+      <div class="tip"><b>Tip:</b> Responde con total naturalidad y datos exactos — la seguridad aquí transmite que no serás un problema administrativo. La fecha límite de tu visa también les comunica (sutilmente) que el timing importa.</div>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">希望年収を教えてください。</span><span class="es">¿Cuál es su expectativa salarial?</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">御社の<ruby>規定<rt>きてい</rt></ruby>に従います。求人に<ruby>記載<rt>きさい</rt></ruby>の420万円から500万円の<ruby>範囲<rt>はんい</rt></ruby>で<ruby>検討<rt>けんとう</rt></ruby>いただければ<ruby>幸<rt>さいわ</rt></ruby>いです。まずはクラウドの実務経験を積み、成果で<ruby>評価<rt>ひょうか</rt></ruby>していただきたいと考えています。</div>
+      <p class="ans-es">Me ajusto a las políticas de la empresa; agradecería que se considere dentro del rango publicado de ¥4.2M–5M. Primero quiero acumular experiencia real en cloud y ser evaluado por resultados.</p>
+      <div class="tip"><b>Tip:</b> En la 1ra entrevista no negocies fuerte. Con tus 8 años puedes apuntar al tope del rango (500万) más adelante; aquí solo muestra flexibilidad.</div>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">いつから働けますか？</span><span class="es">¿Cuándo puede empezar?</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">現在は離職中ですので、在留資格の変更手続きが<ruby>完了<rt>かんりょう</rt></ruby>し<ruby>次第<rt>しだい</rt></ruby>、すぐに入社可能です。学校との<ruby>調整<rt>ちょうせい</rt></ruby>も<ruby>柔軟<rt>じゅうなん</rt></ruby>に対応できます。</div>
+      <p class="ans-es">Como no tengo empleo actual, puedo incorporarme en cuanto se complete el trámite de cambio de visa. Puedo coordinar con la escuela con flexibilidad.</p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="stamp">問</span><span class="q-text"><span class="jp">5年後、どんなエンジニアになっていたいですか？</span><span class="es">¿Cómo se ve en 5 años? (キャリアプラン)</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">Respuesta modelo</span>
+      <div class="ans-jp">まず1〜2年でクラウド開発の実務力とGoogle Cloudの認定資格を身につけ、プロジェクトの中心メンバーとして<ruby>信頼<rt>しんらい</rt></ruby>される<ruby>存在<rt>そんざい</rt></ruby>になりたいです。<br><br>5年後には、アプリとインフラの両方を理解し、お客様に設計から<ruby>提案<rt>ていあん</rt></ruby>できるエンジニアになりたいと考えています。前職でのリード経験を活かして、チームを<ruby>支<rt>ささ</rt></ruby>える<ruby>役割<rt>やくわり</rt></ruby>にも挑戦したいです。</div>
+      <p class="ans-es">En 1–2 años: dominar el desarrollo cloud en la práctica, certificarme en Google Cloud y ganarme la confianza como miembro central de proyectos. En 5 años: ser un ingeniero que entiende app + infra y puede proponer soluciones desde el diseño al cliente, y con mi experiencia previa de liderazgo, apoyar al equipo también en ese rol.</p>
+      <div class="tip"><b>Tip:</b> Esto refleja exactamente su plan STEP1→STEP3 de la vacante (3 meses → 1 año → miembro central que propone). Se los estás recitando de vuelta.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ==================== E. GYAKUSHITSUMON ==================== -->
+<section>
+  <h2 data-jp="逆質問">F. 逆質問 — Tus preguntas para ellos</h2>
+  <p class="section-note">Al final SIEMPRE preguntan 「何か質問はありますか？」. Responder "no tengo preguntas" es casi descalificante en Japón. Prepara 3–4; usa las que no hayan respondido ya.</p>
+
+  <details class="qa" open>
+    <summary><span class="stamp">逆</span><span class="q-text"><span class="jp">Preguntas recomendadas (elige 3–4)</span><span class="es">Muestran interés genuino + mentalidad de crecimiento</span></span></summary>
+    <div class="qa-body">
+      <span class="ans-label">En japonés</span>
+      <div class="ans-jp">
+      ① 入社後、最初の3ヶ月ではどのような案件を担当することが多いですか？<br><br>
+      ② ジュニアメンバーの技術学習は、どのようにサポートされていますか？資格取得支援制度について詳しく教えていただけますか？<br><br>
+      ③ Cloud Development Sec. のチーム構成について教えてください。何名くらいのチームで、どのような働き方ですか？<br><br>
+      ④ 御社で活躍しているエンジニアに<ruby>共通<rt>きょうつう</rt></ruby>している<ruby>特徴<rt>とくちょう</rt></ruby>はありますか？<br><br>
+      ⑤ 生成AIを活用した案件が増えていると伺いましたが、具体的にはどのようなプロジェクトがありますか？<br><br>
+      ⑥ もしご縁をいただけた場合、入社までに勉強しておくべき技術はありますか？
+      </div>
+      <p class="ans-es">① ¿Qué tipo de proyectos suele llevar un nuevo miembro en los primeros 3 meses? ② ¿Cómo apoyan el aprendizaje de los juniors? ¿Me cuentan más del programa de certificaciones? ③ ¿Cómo está compuesto el equipo de Cloud Development Sec.? ④ ¿Qué tienen en común los ingenieros que destacan aquí? ⑤ Sobre los proyectos de AI generativa, ¿algún ejemplo concreto? ⑥ Si me dan la oportunidad, ¿qué debería estudiar antes de entrar?</p>
+      <div class="tip"><b>Nunca preguntes</b> en 1ra entrevista sobre: horas extra, vacaciones, subida de salario, home office. Eso se pregunta a RRHH después de la oferta. La ⑥ es la joya: comunica que ya te ves dentro y que estudias por iniciativa propia.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ==================== F. ETIQUETA ==================== -->
+<section>
+  <h2 data-jp="作法">G. Etiqueta del 面接 — checklist del día</h2>
+  <ul class="check">
+    <li><b>Formato:</b> confirma si es online o presencial. Presencial (Ebisu Garden Place Tower 11F): llega al edificio 15 min antes, anúnciate en recepción 10 min antes. Online: entra 3–5 min antes, prueba cámara/micrófono, fondo neutro.</li>
+    <li><b>Vestimenta:</b> aunque grasys es 服装自由 para trabajar, a la entrevista ve con traje o mínimo saco + camisa. Nunca pierdes puntos por ir formal.</li>
+    <li>Al entrar a la sala: toca 3 veces, <span class="jp-inline">「失礼します」</span>, siéntate solo cuando te lo indiquen (<span class="jp-inline">「どうぞ」</span>).</li>
+    <li>Primera frase: <span class="jp-inline">「カステヤノス・エリアスと申します。本日はよろしくお願いいたします」</span> + reverencia ligera (30°).</li>
+    <li>Lleva copias impresas de tu 履歴書 y 職務経歴書 (en fólder limpio), aunque ya las hayan recibido.</li>
+    <li>Durante la charla: aizuchi con <span class="jp-inline">「はい」</span>, no interrumpas nunca, y si no entiendes una pregunta: <span class="jp-inline">「申し訳ありません、もう一度お願いできますか」</span> — pedir repetición es 100% aceptable y mejor que responder otra cosa.</li>
+    <li>Si te trabas en japonés: <span class="jp-inline">「英語で説明してもよろしいでしょうか」</span> es válido para UNA respuesta técnica compleja. No abuses.</li>
+    <li>Celular: apagado, no en silencio.</li>
+    <li>Cierre: <span class="jp-inline">「本日は貴重なお時間をいただき、ありがとうございました」</span> + reverencia. Al salir: <span class="jp-inline">「失礼いたします」</span>.</li>
+    <li>Mismo día o siguiente por la mañana: correo de agradecimiento (お礼メール) al reclutador/agente.</li>
+  </ul>
+</section>
+
+<footer>
+  面接対策 — 株式会社grasys · CD_App (Jr.) · Preparado para Elias Castellanos · Julio 2026<br>
+  頑張ってください！自分が一番のユーザーです 🦊
+</footer>
+
 </div>
 
-<div class="card">
-<div class="qnum">Q3</div>
-<div class="q-jp">これまでの<ruby>経歴<rt>けいれき</rt></ruby>を<ruby>簡単<rt>かんたん</rt></ruby>に<ruby>教<rt>おし</rt></ruby>えてください。</div>
-<div class="q-es">Deme un resumen breve de su trayectoria laboral.</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-2016<ruby>年<rt>ねん</rt></ruby>にTSC Mexicoに<ruby>入社<rt>にゅうしゃ</rt></ruby>し、メインフレームエンジニアとして<ruby>自動車<rt>じどうしゃ</rt></ruby><ruby>金融<rt>きんゆう</rt></ruby>システムを<ruby>担当<rt>たんとう</rt></ruby>しました。2019<ruby>年<rt>ねん</rt></ruby>からはBanco Azteca<ruby>銀行<rt>ぎんこう</rt></ruby>で、<ruby>決済<rt>けっさい</rt></ruby>システムの<ruby>開発<rt>かいはつ</rt></ruby>を<ruby>担当<rt>たんとう</rt></ruby>しました。2022<ruby>年<rt>ねん</rt></ruby>からはHCLTechで、<ruby>米国<rt>べいこく</rt></ruby><ruby>銀行<rt>ぎんこう</rt></ruby>のコアバンキングシステムを<ruby>担当<rt>たんとう</rt></ruby>しました。2024<ruby>年<rt>ねん</rt></ruby>に<ruby>退職<rt>たいしょく</rt></ruby>し、<ruby>日本語<rt>にほんご</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>に<ruby>通<rt>かよ</rt></ruby>いながらPythonとAIを<ruby>勉強<rt>べんきょう</rt></ruby>しています。
-</div>
-<div class="a-es">En 2016 entré a TSC Mexico como ingeniero de mainframe, trabajando en sistemas de financiamiento automotriz. Desde 2019 trabajé en Banco Azteca desarrollando sistemas de pago. Desde 2022 estuve en HCLTech, encargándome del sistema core banking de un banco de EE.UU. En 2024 renuncié y desde entonces voy a una escuela de japonés mientras estudio Python e IA.</div>
-</div>
-
-<!-- SECTION 2: TSC -->
-<div class="section">
-<h2>TSC Mexico <ruby>時代<rt>じだい</rt></ruby>（2016〜2019）</h2>
-<div class="section-es">Etapa en TSC Mexico</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q4</div>
-<div class="q-jp">TSC Mexicoでは<ruby>主<rt>おも</rt></ruby>にどんな<ruby>業務<rt>ぎょうむ</rt></ruby>を<ruby>担当<rt>たんとう</rt></ruby>しましたか。</div>
-<div class="q-es">¿A qué se dedicó principalmente en TSC Mexico?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-TSC Mexicoでは、FCA、<ruby>現在<rt>げんざい</rt></ruby>のStellantisという<ruby>自動車<rt>じどうしゃ</rt></ruby><ruby>会社<rt>がいしゃ</rt></ruby><ruby>向<rt>む</rt></ruby>けのシステムを<ruby>担当<rt>たんとう</rt></ruby>しました。COBOL、JCL、DB2、CICSを<ruby>使<rt>つか</rt></ruby>って、<ruby>契約<rt>けいやく</rt></ruby><ruby>管理<rt>かんり</rt></ruby>、<ruby>支払<rt>しはらい</rt></ruby><ruby>処理<rt>しょり</rt></ruby>、<ruby>給与<rt>きゅうよ</rt></ruby><ruby>計算<rt>けいさん</rt></ruby>などのシステムを<ruby>開発<rt>かいはつ</rt></ruby>・<ruby>保守<rt>ほしゅ</rt></ruby>しました。<ruby>新<rt>あたら</rt></ruby>しい<ruby>契約<rt>けいやく</rt></ruby>の<ruby>作成<rt>さくせい</rt></ruby>から、<ruby>契約<rt>けいやく</rt></ruby><ruby>終了<rt>しゅうりょう</rt></ruby>までの<ruby>処理<rt>しょり</rt></ruby>に<ruby>関<rt>かか</rt></ruby>わりました。
-</div>
-<div class="a-es">En TSC Mexico trabajé en sistemas para la empresa automotriz FCA, ahora Stellantis. Con COBOL, JCL, DB2 y CICS, desarrollé y mantuve sistemas de gestión de contratos, procesamiento de pagos y cálculo de nómina. Participé desde la creación de nuevos contratos hasta su finalización.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q5</div>
-<div class="q-jp"><ruby>給与<rt>きゅうよ</rt></ruby><ruby>計算<rt>けいさん</rt></ruby>システムの<ruby>再設計<rt>さいせっけい</rt></ruby>プロジェクトについて<ruby>教<rt>おし</rt></ruby>えてください。</div>
-<div class="q-es">Cuénteme sobre el proyecto de rediseño del sistema de nómina.</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-メキシコの<ruby>労働<rt>ろうどう</rt></ruby><ruby>法<rt>ほう</rt></ruby>が<ruby>変<rt>か</rt></ruby>わったとき、<ruby>給与<rt>きゅうよ</rt></ruby><ruby>計算<rt>けいさん</rt></ruby>システムを<ruby>再設計<rt>さいせっけい</rt></ruby>するプロジェクトがありました。<ruby>私<rt>わたし</rt></ruby>は4<ruby>名<rt>めい</rt></ruby>のメンバーをリードして、タスク<ruby>管理<rt>かんり</rt></ruby>や<ruby>進捗<rt>しんちょく</rt></ruby><ruby>確認<rt>かくにん</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>いました。<ruby>会計<rt>かいけい</rt></ruby><ruby>部門<rt>ぶもん</rt></ruby>とも<ruby>連携<rt>れんけい</rt></ruby>しながら、<ruby>法改正<rt>ほうかいせい</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>にシステムを<ruby>完成<rt>かんせい</rt></ruby>させることができました。
-</div>
-<div class="a-es">Cuando cambió la ley laboral en México, hubo un proyecto para rediseñar el sistema de cálculo de nómina. Lideré a 4 miembros del equipo, gestionando tareas y revisando el avance. Trabajando también con el departamento de contabilidad, logramos terminar el sistema antes de que entrara en vigor el cambio de ley.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q6</div>
-<div class="q-jp">TSC Mexicoを<ruby>退職<rt>たいしょく</rt></ruby>した<ruby>理由<rt>りゆう</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。</div>
-<div class="q-es">¿Por qué dejó TSC Mexico?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-TSC Mexicoでは<ruby>多<rt>おお</rt></ruby>くのことを<ruby>学<rt>まな</rt></ruby>びましたが、<ruby>銀行<rt>ぎんこう</rt></ruby>のシステムにも<ruby>挑戦<rt>ちょうせん</rt></ruby>してみたいと<ruby>思<rt>おも</rt></ruby>うようになりました。そのため2019<ruby>年<rt>ねん</rt></ruby>に<ruby>退職<rt>たいしょく</rt></ruby>し、Banco Azteca<ruby>銀行<rt>ぎんこう</rt></ruby>に<ruby>入社<rt>にゅうしゃ</rt></ruby>しました。
-</div>
-<div class="a-es">Aprendí mucho en TSC Mexico, pero empecé a querer probar también con sistemas bancarios. Por eso renuncié en 2019 y entré a Banco Azteca.</div>
-</div>
-
-<!-- SECTION 3: Banco Azteca -->
-<div class="section">
-<h2>Banco Azteca <ruby>時代<rt>じだい</rt></ruby>（2019〜2022）</h2>
-<div class="section-es">Etapa en Banco Azteca</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q7</div>
-<div class="q-jp">Banco Azteca<ruby>銀行<rt>ぎんこう</rt></ruby>では、どのような<ruby>仕事<rt>しごと</rt></ruby>をしましたか。</div>
-<div class="q-es">¿Qué trabajo hizo en Banco Azteca?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-Banco Azteca<ruby>銀行<rt>ぎんこう</rt></ruby>では、<ruby>法人<rt>ほうじん</rt></ruby>や<ruby>政府<rt>せいふ</rt></ruby><ruby>機関<rt>きかん</rt></ruby>が<ruby>個人<rt>こじん</rt></ruby>に<ruby>支払<rt>しはら</rt></ruby>いをするためのシステムを<ruby>担当<rt>たんとう</rt></ruby>しました。COBOLとJCLで<ruby>開発<rt>かいはつ</rt></ruby>し、<ruby>支払<rt>しはら</rt></ruby>いの<ruby>参照<rt>さんしょう</rt></ruby><ruby>番号<rt>ばんごう</rt></ruby>を<ruby>作<rt>つく</rt></ruby>る<ruby>処理<rt>しょり</rt></ruby>を<ruby>実装<rt>じっそう</rt></ruby>しました。また、QRコードやSMS<ruby>通知<rt>つうち</rt></ruby>の<ruby>機能<rt>きのう</rt></ruby>も<ruby>追加<rt>ついか</rt></ruby>しました。
-</div>
-<div class="a-es">En Banco Azteca trabajé en un sistema para que empresas e instituciones de gobierno hicieran pagos a personas individuales. Lo desarrollé con COBOL y JCL, implementando el proceso para generar números de referencia de pago. También agregué funciones de código QR y notificación por SMS.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q8</div>
-<div class="q-jp"><ruby>既存<rt>きぞん</rt></ruby>のCOBOLシステムをPythonへ<ruby>移行<rt>いこう</rt></ruby>した<ruby>経験<rt>けいけん</rt></ruby>について<ruby>教<rt>おし</rt></ruby>えてください。</div>
-<div class="q-es">Cuénteme sobre su experiencia migrando un sistema COBOL a Python.</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-Banco Azteca<ruby>銀行<rt>ぎんこう</rt></ruby>では、<ruby>一部<rt>いちぶ</rt></ruby>のCOBOLの<ruby>機能<rt>きのう</rt></ruby>をPythonに<ruby>移行<rt>いこう</rt></ruby>する<ruby>仕事<rt>しごと</rt></ruby>もしました。<ruby>古<rt>ふる</rt></ruby>いシステムの<ruby>動<rt>うご</rt></ruby>きを<ruby>理解<rt>りかい</rt></ruby>して、<ruby>同<rt>おな</rt></ruby>じ<ruby>結果<rt>けっか</rt></ruby>になるようにPythonで<ruby>書<rt>か</rt></ruby>き<ruby>直<rt>なお</rt></ruby>しました。この<ruby>経験<rt>けいけん</rt></ruby>で、レガシーシステムとモダンな<ruby>言語<rt>げんご</rt></ruby>の<ruby>両方<rt>りょうほう</rt></ruby>を<ruby>扱<rt>あつか</rt></ruby>う<ruby>力<rt>ちから</rt></ruby>がついたと<ruby>思<rt>おも</rt></ruby>います。
-</div>
-<div class="a-es">En Banco Azteca también trabajé migrando algunas funciones de COBOL a Python. Entendí cómo funcionaba el sistema antiguo y lo reescribí en Python para obtener los mismos resultados. Con esa experiencia siento que gané la capacidad de manejar tanto sistemas legacy como lenguajes modernos.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q9</div>
-<div class="q-jp">Banco Azteca<ruby>銀行<rt>ぎんこう</rt></ruby>を<ruby>退職<rt>たいしょく</rt></ruby>した<ruby>理由<rt>りゆう</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。</div>
-<div class="q-es">¿Por qué dejó Banco Azteca?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-Banco Azteca<ruby>銀行<rt>ぎんこう</rt></ruby>での<ruby>仕事<rt>しごと</rt></ruby>にはとても<ruby>満足<rt>まんぞく</rt></ruby>していましたが、もっと<ruby>大<rt>おお</rt></ruby>きい<ruby>規模<rt>きぼ</rt></ruby>のプロジェクトや、<ruby>外国<rt>がいこく</rt></ruby>のチームと<ruby>働<rt>はたら</rt></ruby>く<ruby>経験<rt>けいけん</rt></ruby>を<ruby>積<rt>つ</rt></ruby>みたいと<ruby>思<rt>おも</rt></ruby>いました。そのため2022<ruby>年<rt>ねん</rt></ruby>にHCLTechに<ruby>入社<rt>にゅうしゃ</rt></ruby>しました。
-</div>
-<div class="a-es">Estaba muy satisfecho con mi trabajo en Banco Azteca, pero quería ganar experiencia en proyectos de mayor escala y trabajar con equipos internacionales. Por eso en 2022 entré a HCLTech.</div>
-</div>
-
-<!-- SECTION 4: HCLTech -->
-<div class="section">
-<h2>HCLTech <ruby>時代<rt>じだい</rt></ruby>（2022〜2024）</h2>
-<div class="section-es">Etapa en HCLTech</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q10</div>
-<div class="q-jp">HCLTechでは、どのようなプロジェクトを<ruby>担当<rt>たんとう</rt></ruby>しましたか。</div>
-<div class="q-es">¿Qué proyecto tuvo a su cargo en HCLTech?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-HCLTechでは、<ruby>米国<rt>べいこく</rt></ruby>の<ruby>銀行<rt>ぎんこう</rt></ruby>USAA<ruby>向<rt>む</rt></ruby>けのコアバンキングシステムを<ruby>担当<rt>たんとう</rt></ruby>しました。FiservからKobieへのポイントシステム<ruby>移行<rt>いこう</rt></ruby>プロジェクトに<ruby>参加<rt>さんか</rt></ruby>し、COBOLとJCLで<ruby>日次<rt>にちじ</rt></ruby>のポイント<ruby>照合<rt>しょうごう</rt></ruby>バッチを<ruby>開発<rt>かいはつ</rt></ruby>・<ruby>修正<rt>しゅうせい</rt></ruby>しました。
-</div>
-<div class="a-es">En HCLTech trabajé en el sistema core banking para el banco estadounidense USAA. Participé en el proyecto de migración del sistema de puntos de Fiserv a Kobie, desarrollando y modificando el proceso batch diario de conciliación de puntos con COBOL y JCL.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q11</div>
-<div class="q-jp">Core Incident Response Teamでの<ruby>経験<rt>けいけん</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えてください。</div>
-<div class="q-es">Cuénteme sobre su experiencia en el Core Incident Response Team.</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-<ruby>本番<rt>ほんばん</rt></ruby><ruby>環境<rt>かんきょう</rt></ruby>で<ruby>問題<rt>もんだい</rt></ruby>が<ruby>起<rt>お</rt></ruby>きたとき、<ruby>優先度<rt>ゆうせんど</rt></ruby>の<ruby>高<rt>たか</rt></ruby>いインシデントを<ruby>分析<rt>ぶんせき</rt></ruby>して<ruby>対応<rt>たいおう</rt></ruby>するチームにいました。<ruby>問題<rt>もんだい</rt></ruby>の<ruby>原因<rt>げんいん</rt></ruby>を<ruby>早<rt>はや</rt></ruby>く<ruby>見<rt>み</rt></ruby>つけて、<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>小<rt>ちい</rt></ruby>さくすることを<ruby>心<rt>こころ</rt></ruby>がけました。この<ruby>経験<rt>けいけん</rt></ruby>で、プレッシャーの<ruby>中<rt>なか</rt></ruby>でも<ruby>冷静<rt>れいせい</rt></ruby>に<ruby>対応<rt>たいおう</rt></ruby>する<ruby>力<rt>ちから</rt></ruby>がつきました。
-</div>
-<div class="a-es">Estuve en un equipo que analizaba y respondía a incidentes de alta prioridad cuando había problemas en el ambiente de producción. Procuraba encontrar la causa rápido para minimizar el impacto. Con esa experiencia gané la capacidad de responder con calma bajo presión.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q12</div>
-<div class="q-jp"><ruby>前職<rt>ぜんしょく</rt></ruby>（HCLTech）を<ruby>退職<rt>たいしょく</rt></ruby>した<ruby>理由<rt>りゆう</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。</div>
-<div class="q-es">¿Por qué dejó su último trabajo (HCLTech)?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-<ruby>前職<rt>ぜんしょく</rt></ruby>では<ruby>米国<rt>べいこく</rt></ruby>の<ruby>銀行<rt>ぎんこう</rt></ruby>のコアバンキングシステムを<ruby>担当<rt>たんとう</rt></ruby>していました。COBOLとJCLの<ruby>仕事<rt>しごと</rt></ruby>にやりがいを<ruby>感<rt>かん</rt></ruby>じていましたが、これからはAIやモダンな<ruby>技術<rt>ぎじゅつ</rt></ruby>を<ruby>使<rt>つか</rt></ruby>う<ruby>仕事<rt>しごと</rt></ruby>をしたいと<ruby>思<rt>おも</rt></ruby>うようになりました。そのため2024<ruby>年<rt>ねん</rt></ruby>に<ruby>退職<rt>たいしょく</rt></ruby>し、<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しながらAIとPythonのスキルを<ruby>身<rt>み</rt></ruby>につけることにしました。
-</div>
-<div class="a-es">En mi trabajo anterior me encargaba de un sistema core banking de un banco de EE.UU. Disfrutaba el trabajo con COBOL y JCL, pero empecé a querer trabajar con IA y tecnologías más modernas. Por eso renuncié en 2024 y decidí estudiar japonés mientras desarrollaba habilidades de IA y Python.</div>
-</div>
-
-<!-- SECTION 5: Reflexion -->
-<div class="section">
-<h2><ruby>振<rt>ふ</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>り</h2>
-<div class="section-es">Reflexión sobre toda la trayectoria</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q13</div>
-<div class="q-jp">8<ruby>年間<rt>ねんかん</rt></ruby>のキャリアの<ruby>中<rt>なか</rt></ruby>で、<ruby>一番<rt>いちばん</rt></ruby><ruby>印象<rt>いんしょう</rt></ruby>に<ruby>残<rt>のこ</rt></ruby>っているプロジェクトは<ruby>何<rt>なん</rt></ruby>ですか。</div>
-<div class="q-es">De sus 8 años de carrera, ¿qué proyecto recuerda más?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-メキシコの<ruby>労働<rt>ろうどう</rt></ruby><ruby>法<rt>ほう</rt></ruby><ruby>改正<rt>かいせい</rt></ruby>のときの、<ruby>給与<rt>きゅうよ</rt></ruby><ruby>計算<rt>けいさん</rt></ruby>システムの<ruby>再設計<rt>さいせっけい</rt></ruby>プロジェクトが<ruby>一番<rt>いちばん</rt></ruby><ruby>印象<rt>いんしょう</rt></ruby>に<ruby>残<rt>のこ</rt></ruby>っています。<ruby>初<rt>はじ</rt></ruby>めてチームをリードした<ruby>経験<rt>けいけん</rt></ruby>で、<ruby>期限<rt>きげん</rt></ruby><ruby>内<rt>ない</rt></ruby>にシステムを<ruby>完成<rt>かんせい</rt></ruby>させることができて、とても<ruby>達成感<rt>たっせいかん</rt></ruby>がありました。
-</div>
-<div class="a-es">El proyecto que más recuerdo es el de rediseño del sistema de nómina por el cambio de ley laboral en México. Fue mi primera vez liderando un equipo, y logramos terminar el sistema a tiempo, lo cual me dio una gran sensación de logro.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q14</div>
-<div class="q-jp">これまでの<ruby>仕事<rt>しごと</rt></ruby>で<ruby>一番<rt>いちばん</rt></ruby><ruby>大変<rt>たいへん</rt></ruby>だったことは<ruby>何<rt>なん</rt></ruby>ですか。</div>
-<div class="q-es">¿Cuál ha sido lo más difícil en su trabajo hasta ahora?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-HCLTechで、<ruby>本番<rt>ほんばん</rt></ruby><ruby>環境<rt>かんきょう</rt></ruby>の<ruby>重大<rt>じゅうだい</rt></ruby>なインシデントに<ruby>対応<rt>たいおう</rt></ruby>したことが<ruby>一番<rt>いちばん</rt></ruby><ruby>大変<rt>たいへん</rt></ruby>でした。<ruby>時間<rt>じかん</rt></ruby>のプレッシャーの<ruby>中<rt>なか</rt></ruby>で、<ruby>原因<rt>げんいん</rt></ruby>を<ruby>早<rt>はや</rt></ruby>く<ruby>見<rt>み</rt></ruby>つける<ruby>必要<rt>ひつよう</rt></ruby>がありました。チームと<ruby>協力<rt>きょうりょく</rt></ruby>しながら、<ruby>落<rt>お</rt></ruby>ち<ruby>着<rt>つ</rt></ruby>いて<ruby>対応<rt>たいおう</rt></ruby>することができました。
-</div>
-<div class="a-es">Lo más difícil fue cuando respondí a un incidente crítico en producción en HCLTech. Bajo presión de tiempo, tenía que encontrar la causa rápidamente. Pude manejarlo con calma trabajando en equipo.</div>
-</div>
-
-<!-- SECTION 6: Japon / AI -->
-<div class="section">
-<h2><ruby>日本<rt>にほん</rt></ruby>とAIへの<ruby>転向<rt>てんこう</rt></ruby></h2>
-<div class="section-es">Transición hacia Japón y la IA</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q15</div>
-<div class="q-jp">Kitsune Studyについて<ruby>教<rt>おし</rt></ruby>えてください。</div>
-<div class="q-es">Cuénteme sobre Kitsune Study.</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-Kitsune Studyは、<ruby>日本語<rt>にほんご</rt></ruby><ruby>学習<rt>がくしゅう</rt></ruby><ruby>者<rt>しゃ</rt></ruby><ruby>向<rt>む</rt></ruby>けのウェブアプリです。JLPT<ruby>対策<rt>たいさく</rt></ruby>、<ruby>語彙<rt>ごい</rt></ruby>、<ruby>漢字<rt>かんじ</rt></ruby>、<ruby>文法<rt>ぶんぽう</rt></ruby>の<ruby>学習<rt>がくしゅう</rt></ruby>、<ruby>聴解<rt>ちょうかい</rt></ruby>、<ruby>読解<rt>どっかい</rt></ruby>などの<ruby>機能<rt>きのう</rt></ruby>があります。バックエンドはFastAPIとPostgreSQL、フロントエンドはReactとTypeScriptを<ruby>使<rt>つか</rt></ruby>っています。Gemini APIを<ruby>使<rt>つか</rt></ruby>って、ユーザーのJLPTレベルに<ruby>合<rt>あ</rt></ruby>わせた<ruby>文法<rt>ぶんぽう</rt></ruby>や<ruby>読解<rt>どっかい</rt></ruby>の<ruby>問題<rt>もんだい</rt></ruby>を<ruby>自動<rt>じどう</rt></ruby>で<ruby>作<rt>つく</rt></ruby>る<ruby>機能<rt>きのう</rt></ruby>も<ruby>実装<rt>じっそう</rt></ruby>しました。<ruby>妻<rt>つま</rt></ruby>と<ruby>二人<rt>ふたり</rt></ruby>で<ruby>企画<rt>きかく</rt></ruby>し、<ruby>私<rt>わたし</rt></ruby>は<ruby>主<rt>おも</rt></ruby>に<ruby>開発<rt>かいはつ</rt></ruby>を<ruby>担当<rt>たんとう</rt></ruby>しています。
-</div>
-<div class="a-es">Kitsune Study es una app web para estudiantes de japonés. Tiene preparación para el JLPT, aprendizaje de vocabulario, kanji, gramática, comprensión auditiva y lectura. El backend usa FastAPI y PostgreSQL, y el frontend React y TypeScript. También implementé, con la API de Gemini, una función para generar automáticamente ejercicios de gramática y lectura según el nivel JLPT del usuario. Lo planeamos entre mi esposa y yo, y yo me encargo principalmente del desarrollo.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q16</div>
-<div class="q-jp">なぜAIに<ruby>興味<rt>きょうみ</rt></ruby>を<ruby>持<rt>も</rt></ruby>ちましたか。</div>
-<div class="q-es">¿Por qué se interesó en la IA?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-メインフレームの<ruby>仕事<rt>しごと</rt></ruby>で、バッチ<ruby>処理<rt>しょり</rt></ruby>やデータ<ruby>処理<rt>しょり</rt></ruby>を<ruby>担当<rt>たんとう</rt></ruby>していましたが、これからはAI<ruby>技術<rt>ぎじゅつ</rt></ruby>が<ruby>中心<rt>ちゅうしん</rt></ruby>になると<ruby>感<rt>かん</rt></ruby>じました。<ruby>個人<rt>こじん</rt></ruby><ruby>開発<rt>かいはつ</rt></ruby>でGemini APIを<ruby>使<rt>つか</rt></ruby>ってみて、AIの<ruby>可能性<rt>かのうせい</rt></ruby>にとても<ruby>興味<rt>きょうみ</rt></ruby>を<ruby>持<rt>も</rt></ruby>ちました。これからもAIの<ruby>知識<rt>ちしき</rt></ruby>をもっと<ruby>深<rt>ふか</rt></ruby>く<ruby>学<rt>まな</rt></ruby>びたいと<ruby>思<rt>おも</rt></ruby>っています。
-</div>
-<div class="a-es">En mi trabajo de mainframe me encargaba de procesos batch y de datos, pero sentí que la IA será el centro de la tecnología en el futuro. Al usar la API de Gemini en mi proyecto personal, me interesé mucho en el potencial de la IA. Quiero seguir profundizando mis conocimientos de IA.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q17</div>
-<div class="q-jp"><ruby>志望<rt>しぼう</rt></ruby><ruby>動機<rt>どうき</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えてください。</div>
-<div class="q-es">¿Cuál es su motivación para postularse aquí?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-<ruby>御社<rt>おんしゃ</rt></ruby>は、AIやデータを<ruby>使<rt>つか</rt></ruby>って、お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>課題<rt>かだい</rt></ruby>を<ruby>実際<rt>じっさい</rt></ruby>に<ruby>解決<rt>かいけつ</rt></ruby>する<ruby>会社<rt>かいしゃ</rt></ruby>だと<ruby>理解<rt>りかい</rt></ruby>しています。<ruby>提案<rt>ていあん</rt></ruby>だけでなく、<ruby>導入<rt>どうにゅう</rt></ruby>してお<ruby>客様<rt>きゃくさま</rt></ruby>が<ruby>使<rt>つか</rt></ruby>い<ruby>続<rt>つづ</rt></ruby>けられるまでサポートするところに<ruby>魅力<rt>みりょく</rt></ruby>を<ruby>感<rt>かん</rt></ruby>じました。<ruby>私<rt>わたし</rt></ruby>は<ruby>金融<rt>きんゆう</rt></ruby><ruby>系<rt>けい</rt></ruby>の<ruby>基幹<rt>きかん</rt></ruby>システムで、<ruby>開発<rt>かいはつ</rt></ruby>、<ruby>保守<rt>ほしゅ</rt></ruby>、<ruby>障害<rt>しょうがい</rt></ruby><ruby>対応<rt>たいおう</rt></ruby>を8<ruby>年<rt>ねん</rt></ruby>以上<ruby>経験<rt>けいけん</rt></ruby>してきました。AIの<ruby>実務<rt>じつむ</rt></ruby><ruby>経験<rt>けいけん</rt></ruby>はまだ<ruby>少<rt>すく</rt></ruby>ないですが、PythonやGemini APIを<ruby>使<rt>つか</rt></ruby>った<ruby>個人<rt>こじん</rt></ruby><ruby>開発<rt>かいはつ</rt></ruby>を<ruby>通<rt>とお</rt></ruby>して、<ruby>勉強<rt>べんきょう</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けています。<ruby>御社<rt>おんしゃ</rt></ruby>でなら、これまでのシステム<ruby>開発<rt>かいはつ</rt></ruby>の<ruby>経験<rt>けいけん</rt></ruby>を<ruby>活<rt>い</rt></ruby>かしながら、AIの<ruby>分野<rt>ぶんや</rt></ruby>でも<ruby>早<rt>はや</rt></ruby>く<ruby>実務<rt>じつむ</rt></ruby>に<ruby>貢献<rt>こうけん</rt></ruby>できるようになりたいと<ruby>思<rt>おも</rt></ruby>っています。
-</div>
-<div class="a-es">Entiendo que su empresa es una compañía que resuelve problemas reales de los clientes usando IA y datos. Me atrajo que no solo proponen soluciones, sino que las implementan y apoyan hasta que el cliente pueda seguir usándolas por sí mismo. Yo tengo más de 8 años de experiencia en desarrollo, mantenimiento y respuesta a incidentes en sistemas core financieros. Todavía tengo poca experiencia práctica en IA, pero sigo aprendiendo a través de proyectos personales con Python y la API de Gemini. Con su empresa, quiero aprovechar mi experiencia en desarrollo de sistemas y poder contribuir pronto también en el área de IA.</div>
-</div>
-
-<!-- SECTION 7: Personalidad -->
-<div class="section">
-<h2><ruby>人柄<rt>ひとがら</rt></ruby>・<ruby>強<rt>つよ</rt></ruby>み<ruby>弱<rt>よわ</rt></ruby>み</h2>
-<div class="section-es">Personalidad, fortalezas y debilidades</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q18</div>
-<div class="q-jp">あなたの<ruby>強<rt>つよ</rt></ruby>みは<ruby>何<rt>なん</rt></ruby>ですか。</div>
-<div class="q-es">¿Cuál es su fortaleza?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-<ruby>私<rt>わたし</rt></ruby>の<ruby>強<rt>つよ</rt></ruby>みは、<ruby>問題<rt>もんだい</rt></ruby>が<ruby>起<rt>お</rt></ruby>きたときに、<ruby>原因<rt>げんいん</rt></ruby>を<ruby>冷静<rt>れいせい</rt></ruby>に<ruby>分析<rt>ぶんせき</rt></ruby>して、<ruby>解決<rt>かいけつ</rt></ruby>まで<ruby>対応<rt>たいおう</rt></ruby>できることです。<ruby>金融<rt>きんゆう</rt></ruby><ruby>系<rt>けい</rt></ruby>の<ruby>本番<rt>ほんばん</rt></ruby><ruby>環境<rt>かんきょう</rt></ruby>では、<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>小<rt>ちい</rt></ruby>さくするために、<ruby>早<rt>はや</rt></ruby>く<ruby>正確<rt>せいかく</rt></ruby>に<ruby>原因<rt>げんいん</rt></ruby>を<ruby>見<rt>み</rt></ruby>つける<ruby>必要<rt>ひつよう</rt></ruby>がありました。また、<ruby>新<rt>あたら</rt></ruby>しい<ruby>技術<rt>ぎじゅつ</rt></ruby>も<ruby>自分<rt>じぶん</rt></ruby>で<ruby>学<rt>まな</rt></ruby>ぶ<ruby>姿勢<rt>しせい</rt></ruby>があります。<ruby>以前<rt>いぜん</rt></ruby>、Javaの<ruby>担当<rt>たんとう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>が<ruby>退職<rt>たいしょく</rt></ruby>したとき、<ruby>自分<rt>じぶん</rt></ruby>で<ruby>勉強<rt>べんきょう</rt></ruby>して<ruby>業務<rt>ぎょうむ</rt></ruby>を<ruby>引<rt>ひ</rt></ruby>き<ruby>継<rt>つ</rt></ruby>いだ<ruby>経験<rt>けいけん</rt></ruby>があります。<ruby>今<rt>いま</rt></ruby>は、メインフレームの<ruby>経験<rt>けいけん</rt></ruby>とAI・Pythonの<ruby>知識<rt>ちしき</rt></ruby>を<ruby>つなげられる</ruby>エンジニアになりたいと<ruby>思<rt>おも</rt></ruby>っています。
-</div>
-<div class="a-es">Mi fortaleza es que puedo analizar la causa con calma y llegar hasta la solución cuando ocurre un problema. En entornos de producción financieros, había que encontrar la causa rápido y con precisión para minimizar el impacto. Además, tengo la actitud de aprender por mi cuenta nuevas tecnologías. Antes, cuando la persona a cargo de Java renunció, estudié por mi cuenta y me hice cargo de esa parte del trabajo. Ahora quiero ser un ingeniero que pueda conectar mi experiencia en mainframe con mis conocimientos de IA y Python.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q19</div>
-<div class="q-jp">あなたの<ruby>弱<rt>よわ</rt></ruby>みは<ruby>何<rt>なん</rt></ruby>ですか。</div>
-<div class="q-es">¿Cuál es su debilidad?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-<ruby>私<rt>わたし</rt></ruby>の<ruby>課題<rt>かだい</rt></ruby>は、<ruby>日本語<rt>にほんご</rt></ruby>で<ruby>専門<rt>せんもん</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>内容<rt>ないよう</rt></ruby>を<ruby>説明<rt>せつめい</rt></ruby>するとき、<ruby>時間<rt>じかん</rt></ruby>がかかることがあることです。ただ、<ruby>分<rt>わ</rt></ruby>からないところは<ruby>必<rt>かなら</rt></ruby>ず<ruby>確認<rt>かくにん</rt></ruby>して、<ruby>資料<rt>しりょう</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みながら<ruby>正確<rt>せいかく</rt></ruby>に<ruby>理解<rt>りかい</rt></ruby>するようにしています。JLPT N3に<ruby>合格<rt>ごうかく</rt></ruby>し、N2も<ruby>受験<rt>じゅけん</rt></ruby>しました。これからも<ruby>仕事<rt>しごと</rt></ruby>で<ruby>使<rt>つか</rt></ruby>える<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けて<ruby>伸<rt>の</rt></ruby>ばしていきたいです。
-</div>
-<div class="a-es">Mi reto es que a veces tardo un poco cuando explico contenido técnico en japonés. Sin embargo, siempre confirmo lo que no entiendo y leo los materiales con cuidado para comprender bien. Aprobé el JLPT N3 y también presenté el N2. Quiero seguir desarrollando el japonés que necesito para el trabajo.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q20</div>
-<div class="q-jp">チームで<ruby>働<rt>はたら</rt></ruby>いた<ruby>経験<rt>けいけん</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えてください。</div>
-<div class="q-es">Cuénteme su experiencia trabajando en equipo.</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-これまでの<ruby>会社<rt>かいしゃ</rt></ruby>で、4<ruby>名<rt>めい</rt></ruby>のメンバーをリードした<ruby>経験<rt>けいけん</rt></ruby>や、<ruby>米国<rt>べいこく</rt></ruby>、インド、メキシコの<ruby>多国籍<rt>たこくせき</rt></ruby>チームと<ruby>英語<rt>えいご</rt></ruby>で<ruby>働<rt>はたら</rt></ruby>いた<ruby>経験<rt>けいけん</rt></ruby>があります。タスクを<ruby>割<rt>わ</rt></ruby>り<ruby>当<rt>あ</rt></ruby>てたり、<ruby>進捗<rt>しんちょく</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>したり、コードレビューをしました。
-</div>
-<div class="a-es">En empresas anteriores lideré un equipo de 4 personas y trabajé en inglés con un equipo multinacional de EE.UU., India y México. Asignaba tareas, revisaba el progreso y hacía revisión de código.</div>
-</div>
-
-<!-- SECTION 8: Tecnica AI/Python -->
-<div class="section">
-<h2>AI・Python <ruby>技術<rt>ぎじゅつ</rt></ruby><ruby>質問<rt>しつもん</rt></ruby></h2>
-<div class="section-es">Preguntas técnicas de IA y Python (probable en esta vacante)</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q21</div>
-<div class="q-jp">AIと<ruby>機械<rt>きかい</rt></ruby><ruby>学習<rt>がくしゅう</rt></ruby>の<ruby>違<rt>ちが</rt></ruby>いは<ruby>何<rt>なん</rt></ruby>ですか。</div>
-<div class="q-es">¿Cuál es la diferencia entre IA y machine learning?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-AIは<ruby>広<rt>ひろ</rt></ruby>い<ruby>言葉<rt>ことば</rt></ruby>で、コンピューターが<ruby>人間<rt>にんげん</rt></ruby>のように<ruby>考<rt>かんが</rt></ruby>えたり<ruby>判断<rt>はんだん</rt></ruby>したりする<ruby>技術<rt>ぎじゅつ</rt></ruby><ruby>全体<rt>ぜんたい</rt></ruby>を<ruby>指<rt>さ</rt></ruby>すと<ruby>理解<rt>りかい</rt></ruby>しています。<ruby>機械<rt>きかい</rt></ruby><ruby>学習<rt>がくしゅう</rt></ruby>はその<ruby>中<rt>なか</rt></ruby>の一つの<ruby>方法<rt>ほうほう</rt></ruby>で、データからパターンを<ruby>学<rt>まな</rt></ruby>んで<ruby>予測<rt>よそく</rt></ruby>や<ruby>判断<rt>はんだん</rt></ruby>をする<ruby>技術<rt>ぎじゅつ</rt></ruby>だと<ruby>思<rt>おも</rt></ruby>います。
-</div>
-<div class="a-es">Entiendo que la IA es un término amplio que se refiere a toda la tecnología para que las computadoras piensen o decidan como los humanos. El machine learning es uno de esos métodos, una tecnología que aprende patrones de los datos para predecir o decidir.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q22</div>
-<div class="q-jp"><ruby>教師<rt>きょうし</rt></ruby>あり<ruby>学習<rt>がくしゅう</rt></ruby>と<ruby>教師<rt>きょうし</rt></ruby>なし<ruby>学習<rt>がくしゅう</rt></ruby>の<ruby>違<rt>ちが</rt></ruby>いを<ruby>教<rt>おし</rt></ruby>えてください。</div>
-<div class="q-es">Explique la diferencia entre aprendizaje supervisado y no supervisado.</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-<ruby>教師<rt>きょうし</rt></ruby>あり<ruby>学習<rt>がくしゅう</rt></ruby>は、<ruby>正解<rt>せいかい</rt></ruby>のラベルがついたデータを<ruby>使<rt>つか</rt></ruby>って<ruby>学習<rt>がくしゅう</rt></ruby>する<ruby>方法<rt>ほうほう</rt></ruby>です。<ruby>教師<rt>きょうし</rt></ruby>なし<ruby>学習<rt>がくしゅう</rt></ruby>は、<ruby>正解<rt>せいかい</rt></ruby>のラベルがなく、データの<ruby>中<rt>なか</rt></ruby>のパターンやグループを<ruby>見<rt>み</rt></ruby>つける<ruby>方法<rt>ほうほう</rt></ruby>だと<ruby>理解<rt>りかい</rt></ruby>しています。
-</div>
-<div class="a-es">El aprendizaje supervisado es un método que usa datos con etiquetas de la respuesta correcta. El no supervisado no tiene esas etiquetas y busca patrones o grupos dentro de los datos.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q23</div>
-<div class="q-jp"><ruby>過学習<rt>かがくしゅう</rt></ruby>とは<ruby>何<rt>なん</rt></ruby>ですか。</div>
-<div class="q-es">¿Qué es el sobreajuste (overfitting)?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-<ruby>過学習<rt>かがくしゅう</rt></ruby>は、<ruby>学習<rt>がくしゅう</rt></ruby>データには<ruby>強<rt>つよ</rt></ruby>いですが、<ruby>新<rt>あたら</rt></ruby>しいデータにはうまく<ruby>対応<rt>たいおう</rt></ruby>できない<ruby>状態<rt>じょうたい</rt></ruby>だと<ruby>理解<rt>りかい</rt></ruby>しています。<ruby>学習<rt>がくしゅう</rt></ruby>データの<ruby>細<rt>こま</rt></ruby>かい<ruby>部分<rt>ぶぶん</rt></ruby>まで<ruby>覚<rt>おぼ</rt></ruby>えすぎることが<ruby>原因<rt>げんいん</rt></ruby>だと<ruby>思<rt>おも</rt></ruby>います。
-</div>
-<div class="a-es">Entiendo que el sobreajuste es un estado donde el modelo funciona bien con los datos de entrenamiento pero no responde bien con datos nuevos. Creo que la causa es que memoriza demasiado los detalles específicos de los datos de entrenamiento.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q24</div>
-<div class="q-jp">Gemini APIでどんな<ruby>機能<rt>きのう</rt></ruby>を<ruby>実装<rt>じっそう</rt></ruby>しましたか。</div>
-<div class="q-es">¿Qué función implementó con la API de Gemini?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-Kitsune Studyでは、Gemini APIを<ruby>使<rt>つか</rt></ruby>って、ユーザーのレベルに<ruby>合<rt>あ</rt></ruby>わせた<ruby>文法<rt>ぶんぽう</rt></ruby><ruby>問題<rt>もんだい</rt></ruby>や<ruby>読解<rt>どっかい</rt></ruby><ruby>問題<rt>もんだい</rt></ruby>を<ruby>自動<rt>じどう</rt></ruby>で<ruby>作<rt>つく</rt></ruby>る<ruby>機能<rt>きのう</rt></ruby>を<ruby>実装<rt>じっそう</rt></ruby>しました。プロンプトにJLPTのレベルや<ruby>文法<rt>ぶんぽう</rt></ruby><ruby>項目<rt>こうもく</rt></ruby>を<ruby>指定<rt>してい</rt></ruby>して、<ruby>生成<rt>せいせい</rt></ruby>させています。
-</div>
-<div class="a-es">En Kitsune Study implementé, con la API de Gemini, una función para generar automáticamente problemas de gramática y comprensión lectora según el nivel del usuario. En el prompt especifico el nivel de JLPT y el punto gramatical, y así se genera el contenido.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q25</div>
-<div class="q-jp">プロンプト<ruby>設計<rt>せっけい</rt></ruby>で<ruby>工夫<rt>くふう</rt></ruby>したことは<ruby>何<rt>なん</rt></ruby>ですか。</div>
-<div class="q-es">¿Qué cuidó al diseñar sus prompts?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-<ruby>出力<rt>しゅつりょく</rt></ruby>の<ruby>形式<rt>けいしき</rt></ruby>をJSON<ruby>形式<rt>けいしき</rt></ruby>に<ruby>指定<rt>してい</rt></ruby>して、アプリの<ruby>画面<rt>がめん</rt></ruby>にそのまま<ruby>使<rt>つか</rt></ruby>えるようにしました。また、JLPTレベルや<ruby>語彙<rt>ごい</rt></ruby>リストを<ruby>具体<rt>ぐたい</rt></ruby><ruby>的<rt>てき</rt></ruby>に<ruby>指定<rt>してい</rt></ruby>して、<ruby>内容<rt>ないよう</rt></ruby>がずれないように<ruby>工夫<rt>くふう</rt></ruby>しました。
-</div>
-<div class="a-es">Especifiqué que la salida fuera en formato JSON, para poder usarla directamente en la pantalla de la app. Además, especifiqué de forma concreta el nivel JLPT y la lista de vocabulario, para que el contenido generado no se desviara.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q26</div>
-<div class="q-jp">AIの<ruby>回答<rt>かいとう</rt></ruby>が<ruby>間違<rt>まちが</rt></ruby>っていたら、どう<ruby>対応<rt>たいおう</rt></ruby>しますか。</div>
-<div class="q-es">Si la respuesta de la IA es incorrecta, ¿cómo lo maneja?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-まず、<ruby>間違<rt>まちが</rt></ruby>いのパターンを<ruby>確認<rt>かくにん</rt></ruby>します。プロンプトの<ruby>指示<rt>しじ</rt></ruby>が<ruby>曖昧<rt>あいまい</rt></ruby>な<ruby>場合<rt>ばあい</rt></ruby>は、<ruby>指示<rt>しじ</rt></ruby>をより<ruby>具体<rt>ぐたい</rt></ruby><ruby>的<rt>てき</rt></ruby>にします。それでも<ruby>間違<rt>まちが</rt></ruby>いが<ruby>多<rt>おお</rt></ruby>い<ruby>場合<rt>ばあい</rt></ruby>は、<ruby>生成<rt>せいせい</rt></ruby><ruby>後<rt>ご</rt></ruby>にルールでチェックする<ruby>処理<rt>しょり</rt></ruby>を<ruby>追加<rt>ついか</rt></ruby>することを<ruby>考<rt>かんが</rt></ruby>えます。
-</div>
-<div class="a-es">Primero reviso el patrón del error. Si la instrucción del prompt es ambigua, la hago más específica. Si aun así hay muchos errores, considero agregar una validación con reglas después de la generación.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q27</div>
-<div class="q-jp">RAGについて<ruby>知<rt>し</rt></ruby>っていますか。</div>
-<div class="q-es">¿Conoce el RAG (Retrieval-Augmented Generation)?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-はい。RAGは、AIが<ruby>答<rt>こた</rt></ruby>える<ruby>前<rt>まえ</rt></ruby>に、<ruby>関連<rt>かんれん</rt></ruby>するデータを<ruby>検索<rt>けんさく</rt></ruby>して、その<ruby>情報<rt>じょうほう</rt></ruby>をもとに<ruby>回答<rt>かいとう</rt></ruby>を<ruby>作<rt>つく</rt></ruby>る<ruby>仕組<rt>しく</rt></ruby>みだと<ruby>理解<rt>りかい</rt></ruby>しています。Kitsune Studyでは、pgvectorを<ruby>使<rt>つか</rt></ruby>って、<ruby>文法<rt>ぶんぽう</rt></ruby>データベースからRAGで<ruby>検索<rt>けんさく</rt></ruby>し、AIチューターの<ruby>回答<rt>かいとう</rt></ruby>の<ruby>精度<rt>せいど</rt></ruby>を<ruby>上<rt>あ</rt></ruby>げる<ruby>機能<rt>きのう</rt></ruby>を<ruby>実装<rt>じっそう</rt></ruby>しました。
-</div>
-<div class="a-es">Sí. Entiendo que el RAG es un mecanismo donde la IA busca datos relacionados antes de responder, y genera la respuesta basándose en esa información. En Kitsune Study implementé, usando pgvector, una búsqueda RAG sobre una base de datos de gramática para mejorar la precisión de las respuestas del tutor de IA.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q28</div>
-<div class="q-jp">AIのコストはどう<ruby>管理<rt>かんり</rt></ruby>していますか。</div>
-<div class="q-es">¿Cómo gestiona los costos de IA?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-Kitsune Studyでは、<ruby>生成<rt>せいせい</rt></ruby>した<ruby>内容<rt>ないよう</rt></ruby>をキャッシュして、<ruby>同<rt>おな</rt></ruby>じ<ruby>内容<rt>ないよう</rt></ruby>を<ruby>何度<rt>なんど</rt></ruby>も<ruby>生成<rt>せいせい</rt></ruby>しないようにしています。また、スピードが<ruby>必要<rt>ひつよう</rt></ruby>な<ruby>部分<rt>ぶぶん</rt></ruby>と、バッチで<ruby>大量<rt>たいりょう</rt></ruby>に<ruby>生成<rt>せいせい</rt></ruby>する<ruby>部分<rt>ぶぶん</rt></ruby>で、<ruby>違<rt>ちが</rt></ruby>うAIモデルを<ruby>使<rt>つか</rt></ruby>い<ruby>分<rt>わ</rt></ruby>けて、コストを<ruby>抑<rt>おさ</rt></ruby>える<ruby>工夫<rt>くふう</rt></ruby>をしています。
-</div>
-<div class="a-es">En Kitsune Study, guardo en caché el contenido generado para no volver a generar lo mismo varias veces. Además, uso diferentes modelos de IA según si necesito velocidad o generación masiva por lotes, para mantener los costos bajos.</div>
-</div>
-
-<!-- SECTION 9: Condiciones -->
-<div class="section">
-<h2><ruby>実務<rt>じつむ</rt></ruby><ruby>条件<rt>じょうけん</rt></ruby></h2>
-<div class="section-es">Condiciones prácticas</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q29</div>
-<div class="q-jp"><ruby>日本語<rt>にほんご</rt></ruby>のレベルはどのくらいですか。</div>
-<div class="q-es">¿Cuál es su nivel de japonés?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-2025<ruby>年<rt>ねん</rt></ruby>12<ruby>月<rt>がつ</rt></ruby>にJLPT N3に<ruby>合格<rt>ごうかく</rt></ruby>しました。<ruby>今年<rt>ことし</rt></ruby>の7<ruby>月<rt>がつ</rt></ruby>にN2を<ruby>受験<rt>じゅけん</rt></ruby>しました。<ruby>結果<rt>けっか</rt></ruby>はまだ<ruby>分<rt>わ</rt></ruby>かりませんが、しっかり<ruby>準備<rt>じゅんび</rt></ruby>して<ruby>臨<rt>のぞ</rt></ruby>みました。<ruby>日常<rt>にちじょう</rt></ruby><ruby>会話<rt>かいわ</rt></ruby>はできますが、<ruby>専門<rt>せんもん</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>話<rt>はなし</rt></ruby>はまだ<ruby>勉強<rt>べんきょう</rt></ruby>中です。
-</div>
-<div class="a-es">Aprobé el JLPT N3 en diciembre de 2025. Este año, en julio, presenté el N2. Todavía no sé el resultado, pero me preparé bien para el examen. Puedo mantener conversación diaria, pero todavía estoy aprendiendo el vocabulario más técnico.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q30</div>
-<div class="q-jp"><ruby>在留<rt>ざいりゅう</rt></ruby><ruby>資格<rt>しかく</rt></ruby>について<ruby>教<rt>おし</rt></ruby>えてください。</div>
-<div class="q-es">Cuénteme sobre su estatus de residencia (visa).</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-<ruby>現在<rt>げんざい</rt></ruby>の<ruby>在留<rt>ざいりゅう</rt></ruby><ruby>資格<rt>しかく</rt></ruby>は<ruby>留学<rt>りゅうがく</rt></ruby>で、2026<ruby>年<rt>ねん</rt></ruby>11<ruby>月<rt>がつ</rt></ruby>26<ruby>日<rt>にち</rt></ruby>まで<ruby>有効<rt>ゆうこう</rt></ruby>です。<ruby>採用<rt>さいよう</rt></ruby>していただけましたら、<ruby>就労<rt>しゅうろう</rt></ruby>ビザに<ruby>変更<rt>へんこう</rt></ruby>する<ruby>予定<rt>よてい</rt></ruby>です。
-</div>
-<div class="a-es">Mi estatus actual es de estudiante y es válido hasta el 26 de noviembre de 2026. Si me contratan, tengo planeado cambiar a visa de trabajo.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q31</div>
-<div class="q-jp"><ruby>希望<rt>きぼう</rt></ruby>する<ruby>年収<rt>ねんしゅう</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えてください。</div>
-<div class="q-es">¿Cuál es su expectativa salarial?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-<ruby>今回<rt>こんかい</rt></ruby>のポジションの<ruby>給与<rt>きゅうよ</rt></ruby>レンジは<ruby>理解<rt>りかい</rt></ruby>しております。AI<ruby>分野<rt>ぶんや</rt></ruby>ではポテンシャル<ruby>採用<rt>さいよう</rt></ruby>だと<ruby>認識<rt>にんしき</rt></ruby>していますので、<ruby>御社<rt>おんしゃ</rt></ruby>の<ruby>規定<rt>きてい</rt></ruby>に<ruby>従<rt>したが</rt></ruby>いたいと<ruby>思<rt>おも</rt></ruby>います。ただ、8<ruby>年<rt>ねん</rt></ruby>以上のシステム<ruby>開発<rt>かいはつ</rt></ruby>の<ruby>経験<rt>けいけん</rt></ruby>もありますので、その<ruby>点<rt>てん</rt></ruby>も<ruby>少<rt>すこ</rt></ruby>し<ruby>考慮<rt>こうりょ</rt></ruby>していただければ<ruby>嬉<rt>うれ</rt></ruby>しいです。
-</div>
-<div class="a-es">Entiendo el rango salarial de esta posición. Como sé que en el área de IA es una contratación de potencial, me gustaría seguir el criterio de su empresa. Sin embargo, como tengo más de 8 años de experiencia en desarrollo de sistemas, me alegraría que se considerara un poco ese punto también.</div>
-</div>
-
-<!-- SECTION 10: Cierre -->
-<div class="section">
-<h2><ruby>締<rt>し</rt></ruby>めくくり</h2>
-<div class="section-es">Cierre de la entrevista</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q32</div>
-<div class="q-jp">5<ruby>年後<rt>ねんご</rt></ruby>、どんなエンジニアになりたいですか。</div>
-<div class="q-es">¿Cómo se ve como ingeniero en 5 años?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-5<ruby>年後<rt>ねんご</rt></ruby>は、AIとデータを<ruby>使<rt>つか</rt></ruby>って、お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>業務<rt>ぎょうむ</rt></ruby><ruby>改善<rt>かいぜん</rt></ruby>に<ruby>貢献<rt>こうけん</rt></ruby>できるエンジニアになりたいです。<ruby>特<rt>とく</rt></ruby>に、レガシーシステムとAIをつなぐ<ruby>分野<rt>ぶんや</rt></ruby>で<ruby>強<rt>つよ</rt></ruby>くなりたいです。<ruby>導入<rt>どうにゅう</rt></ruby>して<ruby>終<rt>お</rt></ruby>わりではなく、<ruby>現場<rt>げんば</rt></ruby>で<ruby>使<rt>つか</rt></ruby>われ<ruby>続<rt>つづ</rt></ruby>けるところまで<ruby>関<rt>かか</rt></ruby>わりたいと<ruby>思<rt>おも</rt></ruby>っています。
-</div>
-<div class="a-es">En 5 años quiero ser un ingeniero que contribuya a mejorar las operaciones de los clientes usando IA y datos. Especialmente quiero ser fuerte en el área que conecta sistemas legacy con IA. No quiero que termine solo con la implementación, sino participar hasta que se siga usando de verdad en el día a día.</div>
-</div>
-
-<div class="card">
-<div class="qnum">Q33</div>
-<div class="q-jp"><ruby>何<rt>なに</rt></ruby>か<ruby>質問<rt>しつもん</rt></ruby>はありますか。</div>
-<div class="q-es">¿Tiene alguna pregunta para nosotros?</div>
-<hr>
-<div class="a-label">回答例</div>
-<div class="a-jp">
-<ruby>入社<rt>にゅうしゃ</rt></ruby><ruby>後<rt>ご</rt></ruby>、AI<ruby>技術者<rt>ぎじゅつしゃ</rt></ruby>として、<ruby>最初<rt>さいしょ</rt></ruby>はどんな<ruby>業務<rt>ぎょうむ</rt></ruby>を<ruby>担当<rt>たんとう</rt></ruby>することが<ruby>多<rt>おお</rt></ruby>いですか。また、ポテンシャル<ruby>採用<rt>さいよう</rt></ruby>のエンジニアは、どのように<ruby>成長<rt>せいちょう</rt></ruby>していくことが<ruby>多<rt>おお</rt></ruby>いですか。
-</div>
-<div class="a-es">Después de ingresar, como ingeniero de IA, ¿qué tipo de trabajo suele asignarse primero? Además, ¿cómo suele ser el crecimiento de los ingenieros contratados con potencial?</div>
-</div>
-
-<div class="footer-note">
-<b>Nota:</b> Estas son respuestas modelo, sencillas y en japonés de nivel N3–N4, con algunas frases un poco más elaboradas en Q17 y Q18 para reforzar tu posicionamiento — practícalas más veces que las demás. Recuerda: tu mensaje central es que no eres un principiante en IA, eres un ingeniero con experiencia real en sistemas críticos que está evolucionando hacia IA. Si te preguntan algo inesperado, está bien tomarte un momento (「少々お待ちください」) antes de responder.
-</div>
-
+<script>
+  function openAll(){document.querySelectorAll('details.qa').forEach(d=>d.open=true)}
+  function closeAll(){document.querySelectorAll('details.qa').forEach(d=>d.open=false)}
+  function togglePractice(){
+    const b=document.body, btn=document.getElementById('practiceBtn'), hint=document.getElementById('practiceHint');
+    b.classList.toggle('practice');
+    const on=b.classList.contains('practice');
+    btn.textContent='練習モード: '+(on?'ON':'OFF');
+    hint.style.display=on?'inline':'none';
+    if(on){openAll();document.querySelectorAll('.ans-jp,.ans-es').forEach(el=>el.classList.remove('revealed'))}
+  }
+  document.addEventListener('click',e=>{
+    if(!document.body.classList.contains('practice'))return;
+    const t=e.target.closest('.ans-jp,.ans-es');
+    if(t)t.classList.add('revealed');
+  });
+</script>
 </body>
 </html>
