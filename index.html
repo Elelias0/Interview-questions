@@ -89,6 +89,30 @@
   th{width:220px;background:var(--mist);font-weight:700;color:var(--indigo)}
   tr:last-child th,tr:last-child td{border-bottom:none}
 
+  /* ---------- responsive ---------- */
+  body{overflow-wrap:break-word;word-break:break-word;-webkit-text-size-adjust:100%}
+  img,svg{max-width:100%}
+  @media(max-width:640px){
+    body{font-size:15px}
+    .wrap{padding:0 14px 72px}
+    header{padding:40px 14px 34px}
+    .meta-row{gap:8px}
+    .chip{font-size:.74rem;padding:3px 10px}
+    h2{font-size:1.25rem;flex-wrap:wrap;gap:8px}
+    section{margin-top:48px}
+    /* la tabla se apila en tarjetas */
+    table,tbody,tr,th,td{display:block;width:100%}
+    th{border-bottom:none;padding:8px 14px 2px}
+    td{padding:4px 14px 12px;border-bottom:1px solid var(--line)}
+    tr:last-child td{border-bottom:none}
+    summary{padding:14px;gap:10px}
+    .stamp{flex-basis:34px;width:34px;height:34px;font-size:.92rem}
+    .q-text .jp{font-size:.96rem}
+    .ans-jp{padding:12px 12px;font-size:.96rem;line-height:2}
+    .practice-bar{padding:8px 12px}
+    .practice-bar button{padding:5px 12px;font-size:.78rem}
+  }
+
   /* ---------- strategy cards ---------- */
   .msg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
   .msg{
@@ -116,17 +140,17 @@
     display:flex;align-items:center;justify-content:center;
     transform:rotate(-6deg);
   }
-  .q-text .jp{font-weight:700;font-size:1.02rem;color:var(--indigo)}
+  .q-text .jp{font-weight:700;font-size:1.02rem;color:var(--indigo);line-height:2}
   .q-text .es{font-size:.84rem;color:#75808C;margin-top:2px}
   .qa-body{padding:0 18px 20px 72px;border-top:1px dashed var(--line)}
-  @media(max-width:600px){.qa-body{padding-left:18px}}
+  @media(max-width:640px){.qa-body{padding-left:14px;padding-right:14px}}
   .ans-label{
     display:inline-block;margin:16px 0 8px;font-size:.72rem;font-weight:700;
     letter-spacing:.18em;color:var(--vermilion);text-transform:uppercase;
   }
   .ans-jp{
     background:var(--mist);border-left:4px solid var(--indigo);
-    padding:14px 16px;font-size:1rem;
+    padding:14px 16px;font-size:1rem;line-height:2.1;
   }
   .ans-es{font-size:.88rem;color:#49535E;margin-top:10px;font-style:italic}
   .tip{
